@@ -19,12 +19,11 @@ class ShiftTrackViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-       
         getLocation.run {
             if let location = $0 {
                 print("location = \(location.coordinate.latitude) \(location.coordinate.longitude)")
             } else {
-                print("Get Location failed \(self.getLocation.didFailWithError)")
+                print("Get Location failed \(String(describing: self.getLocation.didFailWithError))")
             }
         }
     }

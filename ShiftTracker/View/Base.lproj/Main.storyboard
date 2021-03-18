@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1oG-Bp-HQP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,23 +8,132 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Shift Track View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Prevous Shifts-->
+        <scene sceneID="NFg-Oo-y2w">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ShiftTrackViewController" customModule="ShiftTracker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="TtC-2y-paD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G9e-zq-0ra">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fs7-mJ-ySf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LVa-eI-H8k">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LVa-eI-H8k" id="RW3-IY-UmC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LHF-Ty-By2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fs7-mJ-ySf" firstAttribute="leading" secondItem="G9e-zq-0ra" secondAttribute="leading" id="DLR-Rb-mMf"/>
+                            <constraint firstAttribute="trailing" secondItem="fs7-mJ-ySf" secondAttribute="trailing" id="OUJ-dA-cv3"/>
+                            <constraint firstItem="fs7-mJ-ySf" firstAttribute="top" secondItem="G9e-zq-0ra" secondAttribute="top" id="gPz-lh-tb3"/>
+                            <constraint firstItem="fs7-mJ-ySf" firstAttribute="bottom" secondItem="LHF-Ty-By2" secondAttribute="bottom" id="rwm-mE-MXN"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Prevous Shifts" image="list.bullet" catalog="system" id="6ay-Ql-oet"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sTw-Nn-GQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="65"/>
+            <point key="canvasLocation" x="-160.86956521739131" y="333.48214285714283"/>
+        </scene>
+        <!--Shift Track-->
+        <scene sceneID="6La-dz-W7y">
+            <objects>
+                <viewController id="JgJ-eu-r6P" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TdJ-lE-Iv5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="Sdp-TZ-TAJ">
+                                <rect key="frame" x="50" y="124" width="314" height="678.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Z6f-Hv-Img">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17N-fU-MDb">
+                                                <rect key="frame" x="0.0" y="0.0" width="147" height="60"/>
+                                                <color key="backgroundColor" red="0.46697666100000002" green="0.89110530519999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="TD5-wm-BJ9"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Shift Start"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyS-Y7-lNp">
+                                                <rect key="frame" x="167" y="0.0" width="147" height="60"/>
+                                                <color key="backgroundColor" red="0.46697666100000002" green="0.89110530519999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Shift End"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0G-ZQ-oof">
+                                        <rect key="frame" x="0.0" y="140" width="314" height="33.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="sM0-81-8xo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NlY-UB-fCO">
+                                        <rect key="frame" x="0.0" y="253.5" width="314" height="425"/>
+                                    </mapView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NlY-UB-fCO" firstAttribute="top" secondItem="m0G-ZQ-oof" secondAttribute="bottom" constant="80" id="L5h-vN-gGV"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="140-Sx-vgw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Sdp-TZ-TAJ" firstAttribute="top" secondItem="140-Sx-vgw" secondAttribute="top" constant="80" id="4dH-g8-biS"/>
+                            <constraint firstItem="Sdp-TZ-TAJ" firstAttribute="leading" secondItem="140-Sx-vgw" secondAttribute="leading" constant="50" id="6e3-6D-JrT"/>
+                            <constraint firstItem="Sdp-TZ-TAJ" firstAttribute="centerX" secondItem="TdJ-lE-Iv5" secondAttribute="centerX" id="EUM-iX-Y54"/>
+                            <constraint firstItem="140-Sx-vgw" firstAttribute="trailing" secondItem="Sdp-TZ-TAJ" secondAttribute="trailing" constant="50" id="RaA-4D-zax"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Shift Track" image="hourglass.badge.plus" catalog="system" id="inS-9c-HRQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJt-A9-fz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-161" y="-272"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="L70-BC-J3y">
+            <objects>
+                <tabBarController id="1oG-Bp-HQP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gYX-3V-BaD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JgJ-eu-r6P" kind="relationship" relationship="viewControllers" id="f1k-4e-d6a"/>
+                        <segue destination="TtC-2y-paD" kind="relationship" relationship="viewControllers" id="rap-B2-WnB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HwN-jU-aIv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1051" y="32"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hourglass.badge.plus" catalog="system" width="106" height="128"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

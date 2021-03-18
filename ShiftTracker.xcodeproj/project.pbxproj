@@ -21,6 +21,7 @@
 		FDA52B602602C79900D26832 /* ShiftResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA52B5F2602C79900D26832 /* ShiftResponse.swift */; };
 		FDA52B662602C96A00D26832 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA52B652602C96A00D26832 /* Constants.swift */; };
 		FDA52BF02603863400D26832 /* GetLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA52BEF2603863400D26832 /* GetLocation.swift */; };
+		FDA52BF52603A27600D26832 /* PreviusShiftsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA52BF42603A27600D26832 /* PreviusShiftsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FDA52B5F2602C79900D26832 /* ShiftResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftResponse.swift; sourceTree = "<group>"; };
 		FDA52B652602C96A00D26832 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FDA52BEF2603863400D26832 /* GetLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocation.swift; sourceTree = "<group>"; };
+		FDA52BF42603A27600D26832 /* PreviusShiftsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviusShiftsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				FDA52B122602C5FA00D26832 /* ShiftTrackViewController.swift */,
+				FDA52BF42603A27600D26832 /* PreviusShiftsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			files = (
 				FDA52BF02603863400D26832 /* GetLocation.swift in Sources */,
 				FDA52B562602C73300D26832 /* ErrorResponse.swift in Sources */,
+				FDA52BF52603A27600D26832 /* PreviusShiftsViewController.swift in Sources */,
 				FDA52B4E2602C6C900D26832 /* DeputyApiClient.swift in Sources */,
 				FDA52B132602C5FA00D26832 /* ShiftTrackViewController.swift in Sources */,
 				FDA52B0F2602C5FA00D26832 /* AppDelegate.swift in Sources */,
