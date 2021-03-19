@@ -49,7 +49,7 @@
         <!--Shift Track-->
         <scene sceneID="6La-dz-W7y">
             <objects>
-                <viewController id="JgJ-eu-r6P" sceneMemberID="viewController">
+                <viewController id="JgJ-eu-r6P" customClass="ShiftTrackViewController" customModule="ShiftTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TdJ-lE-Iv5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,6 +69,9 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Shift Start"/>
+                                                <connections>
+                                                    <action selector="shiftStartButtonPressed:" destination="JgJ-eu-r6P" eventType="touchUpInside" id="aa4-Ha-7jU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyS-Y7-lNp">
                                                 <rect key="frame" x="167" y="0.0" width="147" height="60"/>
@@ -76,6 +79,9 @@
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Shift End"/>
+                                                <connections>
+                                                    <action selector="shiftEndButtonPressed:" destination="JgJ-eu-r6P" eventType="touchUpInside" id="M9e-2P-ahs"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -107,6 +113,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shift Track" image="hourglass.badge.plus" catalog="system" id="inS-9c-HRQ"/>
+                    <connections>
+                        <outlet property="shiftEndButton" destination="Z6f-Hv-Img" id="Ifh-vB-zIU"/>
+                        <outlet property="shiftStarButton" destination="17N-fU-MDb" id="PY3-hL-MAJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJt-A9-fz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
