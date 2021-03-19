@@ -20,19 +20,23 @@ class ShiftTrackViewController: UIViewController, CLLocationManagerDelegate {
     }
         
     @IBAction func shiftStartButtonPressed(_ sender: Any) {
-        createUserShiftRecord(completionHandler: {shift in
-            print(shift?.time)
-            print(shift?.latitude)
-            print(shift?.longitude)
-        })
+        let url = DeputyApiClient.Endpoints.shiftStart.url
+        saveUserShift(url: url)
     }
     
     @IBAction func shiftEndButtonPressed(_ sender: Any) {
-        
+        let url = DeputyApiClient.Endpoints.shiftEnd.url
+        saveUserShift(url: url)
     }
     
-    func saveUserShift() {
-        
+    func saveUserShift(url: URL) {
+        createUserShiftRecord(completionHandler: {shift in
+            DeputyApiClient.requestForPostShift(shiftUrl: url, shift: shift!, completionHandler: {success, error in
+                if success {
+                    print("Susscessfuly saved")
+                }
+            })
+        })
     }
     
     func createUserShiftRecord(completionHandler: @escaping (_ shift : Shift?) -> Void){

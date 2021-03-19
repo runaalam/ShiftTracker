@@ -15,6 +15,11 @@ struct Constants {
     static let Header_Content_Type = "application/json"
     
     static let Url_Shift_Start = "/shift/start"
-    static let Url_Shift_End = "/shift/start"
+    static let Url_Shift_End = "/shift/end"
     static let Url_Previus_Shifts = "/shifts"
+    
+    static let Message_Shift_Started = "Start shift - All good"
+    static let Message_Shift_Ended = "End shift - All good"
+    static let Message_Shift_Inprogress = "Nope, shift already in progress (9)"
+    static let Message_Shift_Not_Inprogress = "Nope, no shift started to be closed"
 }

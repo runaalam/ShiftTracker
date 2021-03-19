@@ -30,14 +30,18 @@ class DeputyApiClient {
         }
     }
     
-    class func requestForShift(shiftUrl: URL, shift: Shift, completionHandler: @escaping (_ success: Bool, _ error: Error?) -> Void) {
-        taskForPOSTRequest(url: shiftUrl, responseType: ShiftResponse.self, body: shift.createJsonData()){ response, error in
+    class func requestForPostShift(shiftUrl: URL, shift: Shift, completionHandler: @escaping (_ success: Bool, _ error: Error?) -> Void) {
+        let bodyText = shift.createJsonData()
+       
+        taskForPOSTRequest(url: shiftUrl, responseType: String.self, body: bodyText){ response, error in
             
             if let response = response {
-                if response.status == "Strat shift - All good" || response.status == "End shift - All good" {
+                if response == Constants.Message_Shift_Started || response == Constants.Message_Shift_Ended {
                     completionHandler(true, nil)
                 }
             } else {
+                print("=========  POST Request Error ===========")
+                print(error as Any)
                 completionHandler(false, error)
             }
         }
@@ -101,13 +105,12 @@ class DeputyApiClient {
 
             let decoder = JSONDecoder()
             do {
-                let responseObject = try decoder.decode(ResponseType.self, from: data)
+                let responseObject = try decoder.decode(responseType.self, from: data)
                 DispatchQueue.main.async {
                     completion(responseObject, nil)
                 }
             } catch {
                 do {
-                    print(error)
                     let errorResponse = try decoder.decode(ErrorResponse.self, from: data) as Error
                     DispatchQueue.main.async {
                         print(errorResponse)
