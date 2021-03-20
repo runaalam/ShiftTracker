@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC84063C2604C41200739232 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84063B2604C41200739232 /* Utility.swift */; };
+		EC8406502605663600739232 /* PreviousShiftRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84064F2605663600739232 /* PreviousShiftRecord.swift */; };
 		FDA52B0F2602C5FA00D26832 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA52B0E2602C5FA00D26832 /* AppDelegate.swift */; };
 		FDA52B112602C5FA00D26832 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA52B102602C5FA00D26832 /* SceneDelegate.swift */; };
 		FDA52B132602C5FA00D26832 /* ShiftTrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA52B122602C5FA00D26832 /* ShiftTrackViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		EC84063B2604C41200739232 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		EC84064F2605663600739232 /* PreviousShiftRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousShiftRecord.swift; sourceTree = "<group>"; };
 		FDA52B0B2602C5FA00D26832 /* ShiftTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiftTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA52B0E2602C5FA00D26832 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDA52B102602C5FA00D26832 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC84064E2605659200739232 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FDA52B022602C5FA00D26832 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +124,7 @@
 			children = (
 				FDA52B412602C61500D26832 /* Model */,
 				FDA52B452602C61D00D26832 /* View */,
+				EC84064E2605659200739232 /* ViewModel */,
 				FDA52B472602C63000D26832 /* Controller */,
 				FDA52B492602C64900D26832 /* Service */,
 				FDA52B642602C94100D26832 /* Resources */,
@@ -147,6 +157,7 @@
 			children = (
 				FDA52B552602C73300D26832 /* ErrorResponse.swift */,
 				FDA52B5A2602C77400D26832 /* Shift.swift */,
+				EC84064F2605663600739232 /* PreviousShiftRecord.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -330,6 +341,7 @@
 				FDA52BF02603863400D26832 /* WidgetLocationManager.swift in Sources */,
 				FDA52B562602C73300D26832 /* ErrorResponse.swift in Sources */,
 				FDA52BF52603A27600D26832 /* PreviusShiftsViewController.swift in Sources */,
+				EC8406502605663600739232 /* PreviousShiftRecord.swift in Sources */,
 				EC84063C2604C41200739232 /* Utility.swift in Sources */,
 				FDA52B4E2602C6C900D26832 /* DeputyApiClient.swift in Sources */,
 				FDA52B132602C5FA00D26832 /* ShiftTrackViewController.swift in Sources */,

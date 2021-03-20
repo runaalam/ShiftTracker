@@ -11,6 +11,5 @@ class PreviusShiftsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 }

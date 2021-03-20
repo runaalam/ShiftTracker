@@ -21,7 +21,7 @@ class DeputyApiClient {
             case .shiftEnd:
                 return Constants.Url_Base + Constants.Url_Shift_End
             case .previousShifts:
-                return Constants.Url_Previus_Shifts
+                return Constants.Url_Base + Constants.Url_Previus_Shifts
             }
         }
 
@@ -30,10 +30,15 @@ class DeputyApiClient {
         }
     }
     
+    enum HTTPMethod: String {
+          case get = "GET"
+          case post = "POST"
+    }
+    
     class func requestForPostShift(shiftUrl: URL, shift: Shift, completionHandler: @escaping (_ success: Bool, _ error: Error?) -> Void) {
         let bodyText = shift.createJsonData()
        
-        taskForPOSTRequest(url: shiftUrl, responseType: String.self, body: bodyText){ response, error in
+        taskForRequest(url: shiftUrl, httpMethod: HTTPMethod.post.rawValue, responseType: String.self, body: bodyText){ response, error in
             
             if let response = response {
                 if response == Constants.Message_Shift_Started || response == Constants.Message_Shift_Ended {
@@ -47,50 +52,20 @@ class DeputyApiClient {
         }
     }
     
-    // HTTP Request Methods
-  
-    class func taskForGETRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, completion: @escaping (ResponseType?, Error?) -> Void) -> URLSessionDataTask {
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data else {
-              DispatchQueue.main.async {
-                  completion(nil, error)
-              }
-              return
-            }
-          
-            let decoder = JSONDecoder()
-            do {
-                let responseObject = try decoder.decode(ResponseType.self, from: data)
-                    DispatchQueue.main.async {
-                        print(responseObject)
-                        completion(responseObject, nil)
-                    }
-            } catch {
-                  do {
-                      let errorResponse = try decoder.decode(ErrorResponse.self, from: data) as Error
-                      DispatchQueue.main.async {
-                          print(errorResponse)
-                          completion(nil, errorResponse)
-                      }
-                  } catch {
-                      DispatchQueue.main.async {
-                          print(error)
-                          completion(nil, error)
-                      }
-                  }
-            }
-        }
-        task.resume()
-      
-        return task
-        
+    class func requestForGetPreviusShifts(completionHandler: @escaping ( _ previuosShifts:[ShiftRecordElement]?, _ error: Error?) -> Void) {
+        let url = Endpoints.previousShifts.url
+        let bodyText = ""
+        taskForRequest(url: url, httpMethod: HTTPMethod.get.rawValue, responseType: PreviousShiftRecord.self, body: bodyText, completion: {responseData, error in
+            completionHandler(responseData, error)
+        })
     }
     
-    class func taskForPOSTRequest<ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, body: String, completion: @escaping (ResponseType?, Error?) -> Void) {
+    // HTTP Request Methods
+  
+    class func taskForRequest<ResponseType: Decodable>(url: URL, httpMethod: String, responseType: ResponseType.Type, body: String, completion: @escaping (ResponseType?, Error?) -> Void) {
 
         var request = URLRequest(url: url)
-        request.httpMethod = "POST"
+        request.httpMethod = httpMethod
         request.httpBody = body.data(using: .utf8)
         request.addValue(Constants.Header_Content_Type, forHTTPHeaderField: "Content-Type")
         request.addValue(Constants.Header_Authorization, forHTTPHeaderField: "Authorization")
@@ -103,15 +78,14 @@ class DeputyApiClient {
                 return
             }
 
-            let decoder = JSONDecoder()
             do {
-                let responseObject = try decoder.decode(responseType.self, from: data)
+                let responseObject = try JSONDecoder().decode(responseType.self, from: data)
                 DispatchQueue.main.async {
                     completion(responseObject, nil)
                 }
             } catch {
                 do {
-                    let errorResponse = try decoder.decode(ErrorResponse.self, from: data) as Error
+                    let errorResponse = try JSONDecoder().decode(ErrorResponse.self, from: data) as Error
                     DispatchQueue.main.async {
                         print(errorResponse)
                         completion(nil, errorResponse)
