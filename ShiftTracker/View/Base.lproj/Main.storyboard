@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="Sdp-TZ-TAJ">
-                                <rect key="frame" x="50" y="124" width="314" height="678.5"/>
+                                <rect key="frame" x="50" y="124" width="314" height="173.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Z6f-Hv-Img">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="60"/>
@@ -101,33 +101,35 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NlY-UB-fCO">
-                                        <rect key="frame" x="0.0" y="253.5" width="314" height="425"/>
-                                    </mapView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="NlY-UB-fCO" firstAttribute="top" secondItem="m0G-ZQ-oof" secondAttribute="bottom" constant="80" id="L5h-vN-gGV"/>
-                                </constraints>
                             </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bva-gM-jfd">
+                                <rect key="frame" x="50" y="305" width="314" height="508"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="140-Sx-vgw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bva-gM-jfd" firstAttribute="top" secondItem="Sdp-TZ-TAJ" secondAttribute="bottom" constant="7.5" id="4a4-bk-2ZM"/>
                             <constraint firstItem="Sdp-TZ-TAJ" firstAttribute="top" secondItem="140-Sx-vgw" secondAttribute="top" constant="80" id="4dH-g8-biS"/>
                             <constraint firstItem="Sdp-TZ-TAJ" firstAttribute="leading" secondItem="140-Sx-vgw" secondAttribute="leading" constant="50" id="6e3-6D-JrT"/>
                             <constraint firstItem="Sdp-TZ-TAJ" firstAttribute="centerX" secondItem="TdJ-lE-Iv5" secondAttribute="centerX" id="EUM-iX-Y54"/>
                             <constraint firstItem="140-Sx-vgw" firstAttribute="trailing" secondItem="Sdp-TZ-TAJ" secondAttribute="trailing" constant="50" id="RaA-4D-zax"/>
+                            <constraint firstItem="bva-gM-jfd" firstAttribute="leading" secondItem="140-Sx-vgw" secondAttribute="leading" constant="50" id="geZ-Ap-HNe"/>
+                            <constraint firstItem="bva-gM-jfd" firstAttribute="bottom" secondItem="140-Sx-vgw" secondAttribute="bottom" id="o9P-Vf-Yv4"/>
+                            <constraint firstItem="140-Sx-vgw" firstAttribute="trailing" secondItem="bva-gM-jfd" secondAttribute="trailing" constant="50" id="s9q-Kr-rLs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shift Track" image="hourglass.badge.plus" catalog="system" id="inS-9c-HRQ"/>
                     <connections>
-                        <outlet property="shiftEndButton" destination="Z6f-Hv-Img" id="Ifh-vB-zIU"/>
+                        <outlet property="mapView" destination="bva-gM-jfd" id="Z5L-LL-Pwr"/>
+                        <outlet property="shiftEndButton" destination="pyS-Y7-lNp" id="QFs-po-afv"/>
                         <outlet property="shiftStarButton" destination="17N-fU-MDb" id="PY3-hL-MAJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJt-A9-fz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-161" y="-272"/>
+            <point key="canvasLocation" x="-162.31884057971016" y="-272.54464285714283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="L70-BC-J3y">
