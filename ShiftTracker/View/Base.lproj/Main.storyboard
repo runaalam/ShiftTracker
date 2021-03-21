@@ -11,7 +11,7 @@
         <!--Prevous Shifts-->
         <scene sceneID="NFg-Oo-y2w">
             <objects>
-                <viewController id="TtC-2y-paD" sceneMemberID="viewController">
+                <viewController id="TtC-2y-paD" customClass="PreviousShiftsViewController" customModule="ShiftTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G9e-zq-0ra">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LVa-eI-H8k">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="shiftRecordCell" id="LVa-eI-H8k">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LVa-eI-H8k" id="RW3-IY-UmC">
@@ -29,6 +29,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="TtC-2y-paD" id="qGP-i6-KHP"/>
+                                    <outlet property="delegate" destination="TtC-2y-paD" id="JMr-i7-UoW"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LHF-Ty-By2"/>
@@ -41,10 +45,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Prevous Shifts" image="list.bullet" catalog="system" id="6ay-Ql-oet"/>
+                    <connections>
+                        <outlet property="tableView" destination="fs7-mJ-ySf" id="2Eg-CD-d1E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTw-Nn-GQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-160.86956521739131" y="333.48214285714283"/>
+            <point key="canvasLocation" x="-162" y="423"/>
         </scene>
         <!--Shift Track-->
         <scene sceneID="6La-dz-W7y">

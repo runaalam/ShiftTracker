@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct ShiftRecordElement: Codable {
+struct ShiftRecord: Codable {
     let id: Int
     let start, end: String
     let startLatitude, startLongitude, endLatitude, endLongitude: String
     let image: String
 }
-typealias PreviousShiftRecord = [ShiftRecordElement]
+typealias PreviousShifts = [ShiftRecord]

@@ -52,10 +52,10 @@ class DeputyApiClient {
         }
     }
     
-    class func requestForGetPreviusShifts(completionHandler: @escaping ( _ previuosShifts:[ShiftRecordElement]?, _ error: Error?) -> Void) {
+    class func requestForGetPreviusShifts(completionHandler: @escaping ( _ previuosShifts:[ShiftRecord]?, _ error: Error?) -> Void) {
         let url = Endpoints.previousShifts.url
         let bodyText = ""
-        taskForRequest(url: url, httpMethod: HTTPMethod.get.rawValue, responseType: PreviousShiftRecord.self, body: bodyText, completion: {responseData, error in
+        taskForRequest(url: url, httpMethod: HTTPMethod.get.rawValue, responseType: PreviousShifts.self, body: bodyText, completion: {responseData, error in
             completionHandler(responseData, error)
         })
     }
