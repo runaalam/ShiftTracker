@@ -8,29 +8,37 @@
 import UIKit
 import MapKit
 import CoreLocation
+import MagicTimer
 
-class ShiftTrackViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class ShiftTrackViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, MagicTimerViewDelegate {
     let widgetLocation = WidgetLocationManager()
     
     @IBOutlet weak var shiftStarButton: UIButton!
     @IBOutlet weak var shiftEndButton: UIButton!
-    @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var timer: MagicTimerView!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         mapView.showsUserLocation = true
         toggleShiftButton(senderButton: shiftEndButton, otherButton: shiftStarButton)
+        setTimmer()
     }
         
     @IBAction func shiftStartButtonPressed(_ sender: Any) {
         toggleShiftButton(senderButton: shiftStarButton, otherButton: shiftEndButton)
+        timer.resetToDefault()
+        timer.startCounting()
         let url = DeputyApiClient.Endpoints.shiftStart.url
         saveUserShift(url: url)
     }
     
     @IBAction func shiftEndButtonPressed(_ sender: Any) {
         toggleShiftButton(senderButton: shiftEndButton, otherButton: shiftStarButton)
+        timer.stopCounting()
         let url = DeputyApiClient.Endpoints.shiftEnd.url
         saveUserShift(url: url)
     }
@@ -39,7 +47,13 @@ class ShiftTrackViewController: UIViewController, CLLocationManagerDelegate, MKM
         senderButton.isEnabled = false
         otherButton.isEnabled = true
     }
-    
+    func setTimmer(){
+        timer.isActiveInBackground = false
+        timer.font = UIFont.systemFont(ofSize: 45, weight: .bold)
+        timer.mode = .stopWatch
+        timer.delegate = self
+    }
+  
     func saveUserShift(url: URL) {
         createUserShiftRecord(completionHandler: {shift in
             DeputyApiClient.requestForPostShift(shiftUrl: url, shift: shift!, completionHandler: {success, error in

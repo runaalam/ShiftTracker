@@ -61,19 +61,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="Sdp-TZ-TAJ">
-                                <rect key="frame" x="50" y="124" width="314" height="173.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Sdp-TZ-TAJ">
+                                <rect key="frame" x="50" y="124" width="314" height="199"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Z6f-Hv-Img">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Z6f-Hv-Img">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17N-fU-MDb">
-                                                <rect key="frame" x="0.0" y="0.0" width="147" height="60"/>
-                                                <color key="backgroundColor" red="0.46697666100000002" green="0.89110530519999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="137" height="50"/>
+                                                <color key="backgroundColor" red="0.0" green="0.76769225840286348" blue="0.78233898346032993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="TD5-wm-BJ9"/>
+                                                    <constraint firstAttribute="height" constant="50" id="TD5-wm-BJ9"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Shift Start"/>
                                                 <connections>
@@ -81,9 +81,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyS-Y7-lNp">
-                                                <rect key="frame" x="167" y="0.0" width="147" height="60"/>
-                                                <color key="backgroundColor" red="0.46697666100000002" green="0.89110530519999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                                <rect key="frame" x="177" y="0.0" width="137" height="50"/>
+                                                <color key="backgroundColor" red="0.0" green="0.76769225839999999" blue="0.78233898349999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Shift End"/>
                                                 <connections>
@@ -93,30 +93,49 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0G-ZQ-oof">
-                                        <rect key="frame" x="0.0" y="140" width="314" height="33.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="sM0-81-8xo"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <rect key="frame" x="0.0" y="85" width="314" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWp-wL-kFf" customClass="MagicTimerView" customModule="MagicTimer">
+                                        <rect key="frame" x="57" y="149" width="200" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="52j-Lb-gWd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                <real key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" red="0.0" green="0.76769225839999999" blue="0.78233898349999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="m0G-ZQ-oof" firstAttribute="leading" secondItem="Sdp-TZ-TAJ" secondAttribute="leading" id="PCV-HL-XmX"/>
+                                    <constraint firstItem="Z6f-Hv-Img" firstAttribute="leading" secondItem="Sdp-TZ-TAJ" secondAttribute="leading" id="xYd-ZT-Ob5"/>
+                                </constraints>
                             </stackView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bva-gM-jfd">
-                                <rect key="frame" x="50" y="305" width="314" height="508"/>
+                                <rect key="frame" x="50" y="353" width="314" height="440"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="140-Sx-vgw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bva-gM-jfd" firstAttribute="top" secondItem="Sdp-TZ-TAJ" secondAttribute="bottom" constant="7.5" id="4a4-bk-2ZM"/>
                             <constraint firstItem="Sdp-TZ-TAJ" firstAttribute="top" secondItem="140-Sx-vgw" secondAttribute="top" constant="80" id="4dH-g8-biS"/>
                             <constraint firstItem="Sdp-TZ-TAJ" firstAttribute="leading" secondItem="140-Sx-vgw" secondAttribute="leading" constant="50" id="6e3-6D-JrT"/>
+                            <constraint firstItem="bva-gM-jfd" firstAttribute="top" secondItem="Sdp-TZ-TAJ" secondAttribute="bottom" constant="30" id="7Ej-4t-L46"/>
                             <constraint firstItem="Sdp-TZ-TAJ" firstAttribute="centerX" secondItem="TdJ-lE-Iv5" secondAttribute="centerX" id="EUM-iX-Y54"/>
                             <constraint firstItem="140-Sx-vgw" firstAttribute="trailing" secondItem="Sdp-TZ-TAJ" secondAttribute="trailing" constant="50" id="RaA-4D-zax"/>
                             <constraint firstItem="bva-gM-jfd" firstAttribute="leading" secondItem="140-Sx-vgw" secondAttribute="leading" constant="50" id="geZ-Ap-HNe"/>
-                            <constraint firstItem="bva-gM-jfd" firstAttribute="bottom" secondItem="140-Sx-vgw" secondAttribute="bottom" id="o9P-Vf-Yv4"/>
+                            <constraint firstItem="bva-gM-jfd" firstAttribute="bottom" secondItem="140-Sx-vgw" secondAttribute="bottom" constant="-20" id="o9P-Vf-Yv4"/>
                             <constraint firstItem="140-Sx-vgw" firstAttribute="trailing" secondItem="bva-gM-jfd" secondAttribute="trailing" constant="50" id="s9q-Kr-rLs"/>
                         </constraints>
                     </view>
@@ -125,6 +144,8 @@
                         <outlet property="mapView" destination="bva-gM-jfd" id="Z5L-LL-Pwr"/>
                         <outlet property="shiftEndButton" destination="pyS-Y7-lNp" id="QFs-po-afv"/>
                         <outlet property="shiftStarButton" destination="17N-fU-MDb" id="PY3-hL-MAJ"/>
+                        <outlet property="timer" destination="zWp-wL-kFf" id="R33-u1-DVn"/>
+                        <outlet property="timerLabel" destination="m0G-ZQ-oof" id="GmS-v1-YE1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJt-A9-fz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
