@@ -101,7 +101,7 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
     
     //Prepare data to save
     func createShiftDataToSave(completionHandler: @escaping (_ shift : Shift?) -> Void){
-        let shiftTime = Utility.getCurrentDateTimeString()
+        let shiftTime = DateUtility.getCurrentDateTimeString()
         var shiftLat = "0.00000"
         var  shiftLon = "0.00000"
         

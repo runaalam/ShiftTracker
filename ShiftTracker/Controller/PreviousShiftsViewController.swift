@@ -18,10 +18,14 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableViewSetUp()
+        self.loadAllPreviousShifts()
+    }
+    
+    func tableViewSetUp(){
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.rowHeight = 120
-        self.loadAllPreviousShifts()
     }
     
     func loadAllPreviousShifts(){
@@ -57,31 +61,11 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
         
         let cell = Bundle.main.loadNibNamed("ShiftRecordTableViewCell", owner: self, options: nil)?.first as! ShiftRecordTableViewCell
         
-        cell.shiftDate!.text = self.getDate(dateStr: shifts[indexPath.row].start)
-        cell.shiftDuration!.text = self.getShiftDuration(start: shifts[indexPath.row].start, end: shifts[indexPath.row].end)
+        cell.shiftDate!.text = DateUtility.getDate(dateStr: shifts[indexPath.row].start)
+        cell.shiftDuration!.text = DateUtility.getShiftDuration(start: shifts[indexPath.row].start, end: shifts[indexPath.row].end)
         let  webImage : WebLinkImage = webLinkImages[indexPath.row]
         cell.shiftImageView.image = webImage.image
         
         return cell
-    }
-    
-    //
-    func getDate(dateStr: String)-> String {
-        if dateStr == "" {
-            return " "
-            
-        } else {
-            return Utility.getDateFromISO8601(string: dateStr, formate: Constants.Formate_Shift_Date)
-        }
-    }
-    
-    func getShiftDuration(start:String, end:String)-> String{
-        var duration = "Worked:  " + Utility.getDateFromISO8601(string: start, formate: Constants.Formate_Shift_Time) + " - " 
-        if end == "" {
-            duration = duration + "In progress"
-        } else {
-            duration = duration + Utility.getDateFromISO8601(string: end, formate: Constants.Formate_Shift_Time)
-        }
-        return duration
     }
 }

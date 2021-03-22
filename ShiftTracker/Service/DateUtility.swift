@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct Utility {
+struct DateUtility {
     
     //Get current date and time in "yyyy-MM-dd'T'HH:mm:ssZZZZZ" formate.
 
@@ -25,5 +25,20 @@ struct Utility {
         dateFormatter.dateFormat = formate
         let dateStr = dateFormatter.string(from: date!)
         return dateStr
+    }
+    
+    //
+    static func getDate(dateStr: String)-> String {
+        return DateUtility.getDateFromISO8601(string: dateStr, formate: Constants.Formate_Shift_Date)
+    }
+    
+    static func getShiftDuration(start:String, end:String)-> String{
+        var duration = "Worked:  " + DateUtility.getDateFromISO8601(string: start, formate: Constants.Formate_Shift_Time) + " - "
+        if end == "" {
+            duration = duration + "In progress"
+        } else {
+            duration = duration + DateUtility.getDateFromISO8601(string: end, formate: Constants.Formate_Shift_Time)
+        }
+        return duration
     }
 }
