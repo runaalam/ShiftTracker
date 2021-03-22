@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct DisplayShift {
+struct ShiftRecordViewModel {
     let id: Int
     let date: String
     let duration: String

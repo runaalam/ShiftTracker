@@ -10,10 +10,8 @@ import UIKit
 class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     @IBOutlet weak var tableView: UITableView!
-    
-//    private var previousShiftsVM : PreviousShiftsViewModel!
-    
-    var displayShifts : [DisplayShift] = []
+        
+    var displayShifts : [ShiftRecordViewModel] = []
     var activityIndicator = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {

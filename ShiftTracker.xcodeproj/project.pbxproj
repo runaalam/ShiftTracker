@@ -10,7 +10,7 @@
 		6D53B27A12B676847707B9E4 /* Pods_ShiftTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71686529ACAE0CE6E9CDB0D9 /* Pods_ShiftTracker.framework */; };
 		8978CC7B6FCF2551AB958353 /* Pods_ShiftTracker_ShiftTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED6C76F39E70E3CC6666B922 /* Pods_ShiftTracker_ShiftTrackerUITests.framework */; };
 		9A6B50F14BFBEF09D05EB285 /* Pods_ShiftTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A84EF03EE8F996F4DBE4FA0 /* Pods_ShiftTrackerTests.framework */; };
-		EC20C4EC2608329A00780F15 /* DisplayShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20C4EB2608329A00780F15 /* DisplayShift.swift */; };
+		EC20C4EC2608329A00780F15 /* ShiftRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20C4EB2608329A00780F15 /* ShiftRecordViewModel.swift */; };
 		EC20C501260849E100780F15 /* MagicTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC20C500260849E100780F15 /* MagicTimer.framework */; };
 		EC84063C2604C41200739232 /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84063B2604C41200739232 /* DateUtility.swift */; };
 		EC8406502605663600739232 /* PreviousShifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84064F2605663600739232 /* PreviousShifts.swift */; };
@@ -58,7 +58,7 @@
 		A3ECF1D7F4CB55454C48A217 /* Pods-ShiftTracker-ShiftTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftTracker-ShiftTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShiftTracker-ShiftTrackerUITests/Pods-ShiftTracker-ShiftTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAF0DCE15D3427A7BC6ED690 /* Pods-ShiftTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftTracker.release.xcconfig"; path = "Target Support Files/Pods-ShiftTracker/Pods-ShiftTracker.release.xcconfig"; sourceTree = "<group>"; };
 		DE04144D8A12378C3CF8BF05 /* Pods-ShiftTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-ShiftTrackerTests/Pods-ShiftTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EC20C4EB2608329A00780F15 /* DisplayShift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayShift.swift; sourceTree = "<group>"; };
+		EC20C4EB2608329A00780F15 /* ShiftRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftRecordViewModel.swift; sourceTree = "<group>"; };
 		EC20C500260849E100780F15 /* MagicTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MagicTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC84063B2604C41200739232 /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
 		EC84064F2605663600739232 /* PreviousShifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousShifts.swift; sourceTree = "<group>"; };
@@ -145,6 +145,7 @@
 		EC84064E2605659200739232 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EC20C4EB2608329A00780F15 /* ShiftRecordViewModel.swift */,
 				EC840671260618B800739232 /* PreviousShiftsViewModel.swift */,
 			);
 			path = ViewModel;
@@ -258,7 +259,6 @@
 				FDA52B4D2602C6C900D26832 /* DeputyApiClient.swift */,
 				FDA52BEF2603863400D26832 /* WidgetLocationManager.swift */,
 				EC84063B2604C41200739232 /* DateUtility.swift */,
-				EC20C4EB2608329A00780F15 /* DisplayShift.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -519,7 +519,7 @@
 				FDA52B4E2602C6C900D26832 /* DeputyApiClient.swift in Sources */,
 				EC840672260618B800739232 /* PreviousShiftsViewModel.swift in Sources */,
 				FDA52B132602C5FA00D26832 /* ShiftTrackViewController.swift in Sources */,
-				EC20C4EC2608329A00780F15 /* DisplayShift.swift in Sources */,
+				EC20C4EC2608329A00780F15 /* ShiftRecordViewModel.swift in Sources */,
 				FDA52B0F2602C5FA00D26832 /* AppDelegate.swift in Sources */,
 				EC840678260681F000739232 /* ShiftRecordTableViewCell.swift in Sources */,
 				FDA52B5B2602C77400D26832 /* Shift.swift in Sources */,
