@@ -15,10 +15,13 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     
     var shifts : PreviousShifts = []
     var webLinkImages : [WebLinkImage] = []
+    var activityIndicator = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetUp()
+        setActivityIndicator(view: self.view)
+        activateActivityIndicator(value: true)
         self.loadAllPreviousShifts()
     }
     
@@ -28,6 +31,21 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
         self.tableView.rowHeight = 120
     }
     
+    func setActivityIndicator(view: UIView) {
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(activityIndicator)
+        activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+    }
+    
+    func activateActivityIndicator(value: Bool){
+        if value{
+            activityIndicator.startAnimating()
+        } else {
+            self.activityIndicator.stopAnimating()
+        }
+    }
+    
     func loadAllPreviousShifts(){
         DeputyApiClient.requestForGetPreviusShifts(completionHandler: {[self]shifts, error in
                 if !shifts!.isEmpty {
@@ -35,6 +53,7 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
                     DispatchQueue.main.async {
                         loadWebLinkImage()
                         self.tableView.reloadData()
+                        activateActivityIndicator(value: false)
                     }
                 }
         })
