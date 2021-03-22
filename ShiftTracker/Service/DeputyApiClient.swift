@@ -56,11 +56,18 @@ class DeputyApiClient {
     }
     
     //Get request for load all previous shift record
-    class func requestForGetPreviusShifts(completionHandler: @escaping ( _ previuosShifts:[ShiftRecord]?, _ error: Error?) -> Void) {
+    class func requestForGetPreviusShifts(completionHandler: @escaping ( _ previuosShifts:[DisplayShift]?,_ error: Error?) -> Void) {
         let url = Endpoints.previousShifts.url
         let bodyText = ""
+        var displayShiftList : [DisplayShift] = []
         taskForRequest(url: url, httpMethod: HTTPMethod.get.rawValue, responseType: PreviousShifts.self, body: bodyText, completion: {responseData, error in
-            completionHandler(responseData, error)
+            if let shifts = responseData {
+                for shift in shifts {
+                    let displayShift = DisplayShift(id: shift.id, url: URL(string: shift.image)!, date: shift.start, start: shift.start, end: shift.end)
+                    displayShiftList.append(displayShift)
+                }
+            }
+            completionHandler(displayShiftList, error)
         })
     }
     

@@ -8,14 +8,18 @@
 import Foundation
 import UIKit
 
-struct WebLinkImage {
+struct DisplayShift {
     let id: Int
+    let date: String
+    let duration: String
     let url: URL
     var image = UIImage(systemName: "info.circle")
     
-    init(id: Int, url: URL){
+    init(id: Int, url: URL, date: String, start: String, end: String){
         self.id = id
         self.url = url
+        self.date =  DateUtility.getDate(dateStr: date)
+        self.duration = DateUtility.getShiftDuration(start: start, end: end)
         if let data = try? Data(contentsOf: url) {
             self.image = UIImage(data: data)
         }

@@ -13,8 +13,7 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     
 //    private var previousShiftsVM : PreviousShiftsViewModel!
     
-    var shifts : PreviousShifts = []
-    var webLinkImages : [WebLinkImage] = []
+    var displayShifts : [DisplayShift] = []
     var activityIndicator = UIActivityIndicatorView(style: .large)
     
     override func viewDidLoad() {
@@ -22,7 +21,7 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
         tableViewSetUp()
         setActivityIndicator(view: self.view)
         activateActivityIndicator(value: true)
-        self.loadAllPreviousShifts()
+        loadAllShifts()
     }
     
     func tableViewSetUp(){
@@ -46,24 +45,16 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-    func loadAllPreviousShifts(){
-        DeputyApiClient.requestForGetPreviusShifts(completionHandler: {[self]shifts, error in
-                if !shifts!.isEmpty {
-                    self.shifts = shifts!
-                    DispatchQueue.main.async {
-                        loadWebLinkImage()
-                        self.tableView.reloadData()
-                        activateActivityIndicator(value: false)
-                    }
+    func loadAllShifts(){
+        DeputyApiClient.requestForGetPreviusShifts(completionHandler: {[self] displayShifts, error in
+            if !displayShifts!.isEmpty {
+                self.displayShifts = displayShifts!
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    activateActivityIndicator(value: false)
                 }
+            }
         })
-    }
-    
-    func loadWebLinkImage(){
-        for shift in shifts {
-            let webImage = WebLinkImage(id: shift.id, url: URL(string: shift.image)!)
-            webLinkImages.append(webImage)
-        }
     }
     
     //MARK: - TableViewDelegate methods
@@ -73,18 +64,16 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.shifts.count
+        return self.displayShifts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = Bundle.main.loadNibNamed("ShiftRecordTableViewCell", owner: self, options: nil)?.first as! ShiftRecordTableViewCell
         
-        cell.shiftDate!.text = DateUtility.getDate(dateStr: shifts[indexPath.row].start)
-        cell.shiftDuration!.text = DateUtility.getShiftDuration(start: shifts[indexPath.row].start, end: shifts[indexPath.row].end)
-        let  webImage : WebLinkImage = webLinkImages[indexPath.row]
-        cell.shiftImageView.image = webImage.image
-        
+        cell.shiftDate!.text = displayShifts[indexPath.row].date
+        cell.shiftDuration!.text = displayShifts[indexPath.row].duration
+        cell.shiftImageView.image = displayShifts[indexPath.row].image
         return cell
     }
 }
