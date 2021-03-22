@@ -1,0 +1,1022 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07CBE7571C8E3BDE016B638B1E89B49E /* Pods-ShiftTracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCFD15F20B3FCCE193F2ECEC3442B566 /* Pods-ShiftTracker-dummy.m */; };
+		0C4A7CC6D51E1B7675111630A0603A57 /* Pods-ShiftTrackerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CFAE17FCA22BA152DFF3C046694F65 /* Pods-ShiftTrackerTests-dummy.m */; };
+		0FD18EA88D7F7B6E26016E53F4EAF890 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		1907ACDDB93A5C43D38938CD38C4C528 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		25F0A224ED719E5A3B77185C6003133A /* MagicTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C735A98F28D7CF78D7451A0DB35A460 /* MagicTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40874DC93392E3A09F6F995C9B842E95 /* MGCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694411C76941F0B6F2697225ABD48FFE /* MGCounter.swift */; };
+		46A226A71EB9C0D238E8B0C6B7C4F145 /* MGStandardTimerFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE850DDD55DBE872D7DE475F8B9B918 /* MGStandardTimerFormatter.swift */; };
+		52EAFEAB70035E985951E4EA069983B3 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9516619056FF87EFA74325CC58D762F5 /* UIFont+Extension.swift */; };
+		65C1FF8EE39CC65E3133C892B867F792 /* MagicTimerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AE43B175B8B5A23CC880546B1BA087 /* MagicTimerViewDelegate.swift */; };
+		6C4C711D098103E5BDAF0751A1E95390 /* MagicTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26054F9C56A0267F2FA0CA862080726C /* MagicTimerView.swift */; };
+		73C55F6FA72E213EE7A89D27A86BBB02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		9A850A3711100B3C9A2BD6A165B41E9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		9D03CD79B9738A26A361A9FD00D6C13A /* Pods-ShiftTracker-ShiftTrackerUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC16A0D878C172E0B56E89A98C648447 /* Pods-ShiftTracker-ShiftTrackerUITests-dummy.m */; };
+		A3991571B25ABFD84C6589D222F6E08F /* MagicTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D57D98FB49715A22589BE33B0D6944 /* MagicTimer-dummy.m */; };
+		BD99D800EC6E5968222333611C093A48 /* MagicTimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D7A00210E788F4F33CE109AE108E557 /* MagicTimerState.swift */; };
+		C880226107A5927E156CBC36FD9E5B66 /* Pods-ShiftTracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C482BCACE8DB0427AC17CB0C69BC868 /* Pods-ShiftTracker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB819D5FA2AB2A5E3B83B8A2784CD87E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		D01F78EE29D91ABC82BE78FBB7C153A5 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4EDECCEB974BDAD23616FC19D68360 /* Int+Extension.swift */; };
+		D2F4B985A754591DEEA7FF9BB8E07166 /* MGStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CDE476A1DE51EB1C7B551F83448CA9 /* MGStateManager.swift */; };
+		D55C69DEBC62678891C30125ECDD0100 /* MGLogable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1FA92AEB39BF1C28C23B428A9359DB /* MGLogable.swift */; };
+		D71417795FAE700606CB367975F832B8 /* TimeInterval+Extesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA960729E24808855C6E71AFE7773A0 /* TimeInterval+Extesnion.swift */; };
+		DD802944B0C2F84FE10DB6D5618D9532 /* MagicTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796E874712B65BCDC70CEAB2A17601BB /* MagicTimer.swift */; };
+		EA6805319CFDF2C371B22B335EC8819D /* MGObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C76E8D31282A81C2A3072183B19AC24 /* MGObservable.swift */; };
+		F288FFD3A5F28218CE1F24D2008D29A3 /* Pods-ShiftTracker-ShiftTrackerUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F37B09FDC7ED3422F7C0F91867FFDFD /* Pods-ShiftTracker-ShiftTrackerUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F2C999CC4195F7120330954181BD27E3 /* MGBackgroundCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBBB783B47A40B047C58DEF1C7ABC59 /* MGBackgroundCalculator.swift */; };
+		FA698AB26CBF8E8C5A4464453F927A1E /* Pods-ShiftTrackerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BD27A1A8A6E04C834768AE1C91327BB8 /* Pods-ShiftTrackerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FC7708FE6C37760CFB000BEDA8560ADB /* MGTimerExecutive.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98AA68CC3317388361DAF69FC4FF3F /* MGTimerExecutive.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CAC8FCA87A797D440A82CA786D56ECE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2957EE0871C8F685E1FB2FB52A69E89F;
+			remoteInfo = "Pods-ShiftTracker";
+		};
+		561D002A9ED1BC626D8D4F30779C322E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A2AFD30069CA32CD2E72E7D9D0E0097;
+			remoteInfo = MagicTimer;
+		};
+		BD389C72F62C7B5CCB7DDD27C632E42D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A2AFD30069CA32CD2E72E7D9D0E0097;
+			remoteInfo = MagicTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01C8743A5DB4CD939B1B3D2457624F36 /* Pods-ShiftTracker-ShiftTrackerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShiftTracker-ShiftTrackerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		08077C6F0B26A44E97E1394B17E2B89C /* MagicTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MagicTimer.release.xcconfig; sourceTree = "<group>"; };
+		0C482BCACE8DB0427AC17CB0C69BC868 /* Pods-ShiftTracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ShiftTracker-umbrella.h"; sourceTree = "<group>"; };
+		0D7A00210E788F4F33CE109AE108E557 /* MagicTimerState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MagicTimerState.swift; path = MagicTimer/Classes/MagicTimerState.swift; sourceTree = "<group>"; };
+		0E4EDECCEB974BDAD23616FC19D68360 /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "MagicTimer/Classes/Int+Extension.swift"; sourceTree = "<group>"; };
+		0F37B09FDC7ED3422F7C0F91867FFDFD /* Pods-ShiftTracker-ShiftTrackerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ShiftTracker-ShiftTrackerUITests-umbrella.h"; sourceTree = "<group>"; };
+		0FB114E27F8414106022220B5B533895 /* MagicTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MagicTimer.framework; path = MagicTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		137343860C7C1F9284ECC9113D75F60A /* Pods-ShiftTracker-ShiftTrackerUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShiftTracker-ShiftTrackerUITests-Info.plist"; sourceTree = "<group>"; };
+		190233D2292AFF9C9CFC5F68260601E4 /* Pods-ShiftTrackerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShiftTrackerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		19CFAE17FCA22BA152DFF3C046694F65 /* Pods-ShiftTrackerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShiftTrackerTests-dummy.m"; sourceTree = "<group>"; };
+		1BAC89D31BAE0A112D505A593BF1A67D /* Pods-ShiftTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ShiftTracker.modulemap"; sourceTree = "<group>"; };
+		217F504538C692D92ABD368FDDF913B8 /* Pods_ShiftTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ShiftTracker.framework; path = "Pods-ShiftTracker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		26054F9C56A0267F2FA0CA862080726C /* MagicTimerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MagicTimerView.swift; path = MagicTimer/Classes/MagicTimerView.swift; sourceTree = "<group>"; };
+		2BE1337D88453377ED6991BF467031EA /* Pods-ShiftTracker-ShiftTrackerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ShiftTracker-ShiftTrackerUITests.modulemap"; sourceTree = "<group>"; };
+		33CBC1B37B8426319D2D135B91357C42 /* Pods-ShiftTracker-ShiftTrackerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ShiftTracker-ShiftTrackerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		33FCD892F07D6B8D8B768EF7E2408E35 /* MagicTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MagicTimer.debug.xcconfig; sourceTree = "<group>"; };
+		3E1BBDB6D3373D93576FDE29B660AAAD /* Pods-ShiftTracker-ShiftTrackerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShiftTracker-ShiftTrackerUITests-frameworks.sh"; sourceTree = "<group>"; };
+		484B7CE7A216013B3B3E8E026BBB5191 /* MagicTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MagicTimer-prefix.pch"; sourceTree = "<group>"; };
+		5146143F4DE38179D5D533B130E93104 /* Pods-ShiftTrackerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ShiftTrackerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		62E9C64CA08141869062B23F3979B6B6 /* Pods-ShiftTrackerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ShiftTrackerTests.modulemap"; sourceTree = "<group>"; };
+		64D57D98FB49715A22589BE33B0D6944 /* MagicTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MagicTimer-dummy.m"; sourceTree = "<group>"; };
+		694411C76941F0B6F2697225ABD48FFE /* MGCounter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGCounter.swift; path = MagicTimer/Classes/MGCounter.swift; sourceTree = "<group>"; };
+		6C735A98F28D7CF78D7451A0DB35A460 /* MagicTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MagicTimer-umbrella.h"; sourceTree = "<group>"; };
+		6EA960729E24808855C6E71AFE7773A0 /* TimeInterval+Extesnion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TimeInterval+Extesnion.swift"; path = "MagicTimer/Classes/TimeInterval+Extesnion.swift"; sourceTree = "<group>"; };
+		709B63B3A8A24CBA8AA5E9072E9F458A /* Pods-ShiftTracker-ShiftTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShiftTracker-ShiftTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		71895AC4666400C295C2668FABA7ED7B /* Pods-ShiftTrackerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShiftTrackerTests-Info.plist"; sourceTree = "<group>"; };
+		796E874712B65BCDC70CEAB2A17601BB /* MagicTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MagicTimer.swift; path = MagicTimer/Classes/MagicTimer.swift; sourceTree = "<group>"; };
+		7B18069E42E1D60D1C5C8241BE8844DB /* Pods-ShiftTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShiftTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		7C76E8D31282A81C2A3072183B19AC24 /* MGObservable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGObservable.swift; path = MagicTimer/Classes/MGObservable.swift; sourceTree = "<group>"; };
+		7D1112D2BAE6F02F98366609C4055DB2 /* Pods-ShiftTracker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShiftTracker-Info.plist"; sourceTree = "<group>"; };
+		80E6A8DC4AC70328290599C87A259456 /* MagicTimer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MagicTimer-Info.plist"; sourceTree = "<group>"; };
+		86E239C33DD4BEC9C923DBC6DB85B87C /* Pods-ShiftTracker-ShiftTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShiftTracker-ShiftTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8DE850DDD55DBE872D7DE475F8B9B918 /* MGStandardTimerFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGStandardTimerFormatter.swift; path = MagicTimer/Classes/MGStandardTimerFormatter.swift; sourceTree = "<group>"; };
+		9516619056FF87EFA74325CC58D762F5 /* UIFont+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+Extension.swift"; path = "MagicTimer/Classes/UIFont+Extension.swift"; sourceTree = "<group>"; };
+		96AE43B175B8B5A23CC880546B1BA087 /* MagicTimerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MagicTimerViewDelegate.swift; path = MagicTimer/Classes/MagicTimerViewDelegate.swift; sourceTree = "<group>"; };
+		984016371473EAE243B5D4F017E4687C /* Pods_ShiftTracker_ShiftTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ShiftTracker_ShiftTrackerUITests.framework; path = "Pods-ShiftTracker-ShiftTrackerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0CDE476A1DE51EB1C7B551F83448CA9 /* MGStateManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGStateManager.swift; path = MagicTimer/Classes/MGStateManager.swift; sourceTree = "<group>"; };
+		A14A845AC6CFC6922CD3CF8A52E54B91 /* Pods-ShiftTracker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShiftTracker-frameworks.sh"; sourceTree = "<group>"; };
+		ACBBB783B47A40B047C58DEF1C7ABC59 /* MGBackgroundCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGBackgroundCalculator.swift; path = MagicTimer/Classes/MGBackgroundCalculator.swift; sourceTree = "<group>"; };
+		B339AFF80A680F88097F308AC1AB74C2 /* MagicTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MagicTimer.modulemap; sourceTree = "<group>"; };
+		B52EF3CFA7C960B9E0FA9FC36CAA9D46 /* Pods-ShiftTracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ShiftTracker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BAA970BB696F6A21E3AEE6A461B0968E /* Pods-ShiftTracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShiftTracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		BC1FA92AEB39BF1C28C23B428A9359DB /* MGLogable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGLogable.swift; path = MagicTimer/Classes/MGLogable.swift; sourceTree = "<group>"; };
+		BCFD15F20B3FCCE193F2ECEC3442B566 /* Pods-ShiftTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShiftTracker-dummy.m"; sourceTree = "<group>"; };
+		BD27A1A8A6E04C834768AE1C91327BB8 /* Pods-ShiftTrackerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ShiftTrackerTests-umbrella.h"; sourceTree = "<group>"; };
+		C5C99B39B0F26D63820439C5D78A7439 /* Pods_ShiftTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ShiftTrackerTests.framework; path = "Pods-ShiftTrackerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DC16A0D878C172E0B56E89A98C648447 /* Pods-ShiftTracker-ShiftTrackerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShiftTracker-ShiftTrackerUITests-dummy.m"; sourceTree = "<group>"; };
+		DD98AA68CC3317388361DAF69FC4FF3F /* MGTimerExecutive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGTimerExecutive.swift; path = MagicTimer/Classes/MGTimerExecutive.swift; sourceTree = "<group>"; };
+		DFC463D527C4A3502302D9312C34D77B /* Pods-ShiftTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShiftTracker.release.xcconfig"; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F40D679C166F7CDC559998FE617C46CE /* Pods-ShiftTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShiftTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		FA358DD8EC3E3E7E0CDE99DDFC8780CF /* Pods-ShiftTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShiftTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41C2C7A7080EF8685550533196D56563 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB819D5FA2AB2A5E3B83B8A2784CD87E /* Foundation.framework in Frameworks */,
+				1907ACDDB93A5C43D38938CD38C4C528 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D17E6D1F24C1DF9240FC3D0A66B952C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73C55F6FA72E213EE7A89D27A86BBB02 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D63421876AE2471F4C619B00A9AD9356 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FD18EA88D7F7B6E26016E53F4EAF890 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA0B7934FF709BA53640FBEF3A55CFD6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A850A3711100B3C9A2BD6A165B41E9E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A9E8CEA221796E5DD89E380F38D725A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FB114E27F8414106022220B5B533895 /* MagicTimer.framework */,
+				217F504538C692D92ABD368FDDF913B8 /* Pods_ShiftTracker.framework */,
+				984016371473EAE243B5D4F017E4687C /* Pods_ShiftTracker_ShiftTrackerUITests.framework */,
+				C5C99B39B0F26D63820439C5D78A7439 /* Pods_ShiftTrackerTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		35C9876FB73FCA9469AE7934B1714A1C /* Pods-ShiftTracker */ = {
+			isa = PBXGroup;
+			children = (
+				1BAC89D31BAE0A112D505A593BF1A67D /* Pods-ShiftTracker.modulemap */,
+				B52EF3CFA7C960B9E0FA9FC36CAA9D46 /* Pods-ShiftTracker-acknowledgements.markdown */,
+				BAA970BB696F6A21E3AEE6A461B0968E /* Pods-ShiftTracker-acknowledgements.plist */,
+				BCFD15F20B3FCCE193F2ECEC3442B566 /* Pods-ShiftTracker-dummy.m */,
+				A14A845AC6CFC6922CD3CF8A52E54B91 /* Pods-ShiftTracker-frameworks.sh */,
+				7D1112D2BAE6F02F98366609C4055DB2 /* Pods-ShiftTracker-Info.plist */,
+				0C482BCACE8DB0427AC17CB0C69BC868 /* Pods-ShiftTracker-umbrella.h */,
+				F40D679C166F7CDC559998FE617C46CE /* Pods-ShiftTracker.debug.xcconfig */,
+				DFC463D527C4A3502302D9312C34D77B /* Pods-ShiftTracker.release.xcconfig */,
+			);
+			name = "Pods-ShiftTracker";
+			path = "Target Support Files/Pods-ShiftTracker";
+			sourceTree = "<group>";
+		};
+		40FA8FCFC45F8523EA6CBE172B2D3627 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				35C9876FB73FCA9469AE7934B1714A1C /* Pods-ShiftTracker */,
+				F6552FA30023FF65BEB2DDF0A7DA1E3D /* Pods-ShiftTracker-ShiftTrackerUITests */,
+				B1F174D87079A4B7C4AF0D8E7FD42727 /* Pods-ShiftTrackerTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		8CE5D2C153466733F5F519766854ECBE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B339AFF80A680F88097F308AC1AB74C2 /* MagicTimer.modulemap */,
+				64D57D98FB49715A22589BE33B0D6944 /* MagicTimer-dummy.m */,
+				80E6A8DC4AC70328290599C87A259456 /* MagicTimer-Info.plist */,
+				484B7CE7A216013B3B3E8E026BBB5191 /* MagicTimer-prefix.pch */,
+				6C735A98F28D7CF78D7451A0DB35A460 /* MagicTimer-umbrella.h */,
+				33FCD892F07D6B8D8B768EF7E2408E35 /* MagicTimer.debug.xcconfig */,
+				08077C6F0B26A44E97E1394B17E2B89C /* MagicTimer.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MagicTimer";
+			sourceTree = "<group>";
+		};
+		B1F174D87079A4B7C4AF0D8E7FD42727 /* Pods-ShiftTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				62E9C64CA08141869062B23F3979B6B6 /* Pods-ShiftTrackerTests.modulemap */,
+				5146143F4DE38179D5D533B130E93104 /* Pods-ShiftTrackerTests-acknowledgements.markdown */,
+				190233D2292AFF9C9CFC5F68260601E4 /* Pods-ShiftTrackerTests-acknowledgements.plist */,
+				19CFAE17FCA22BA152DFF3C046694F65 /* Pods-ShiftTrackerTests-dummy.m */,
+				71895AC4666400C295C2668FABA7ED7B /* Pods-ShiftTrackerTests-Info.plist */,
+				BD27A1A8A6E04C834768AE1C91327BB8 /* Pods-ShiftTrackerTests-umbrella.h */,
+				FA358DD8EC3E3E7E0CDE99DDFC8780CF /* Pods-ShiftTrackerTests.debug.xcconfig */,
+				7B18069E42E1D60D1C5C8241BE8844DB /* Pods-ShiftTrackerTests.release.xcconfig */,
+			);
+			name = "Pods-ShiftTrackerTests";
+			path = "Target Support Files/Pods-ShiftTrackerTests";
+			sourceTree = "<group>";
+		};
+		C854C70CDC162D711983AE6AADB88602 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E42987BBE2E3B8F08B40775A0867F664 /* MagicTimer */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				C854C70CDC162D711983AE6AADB88602 /* Pods */,
+				2A9E8CEA221796E5DD89E380F38D725A /* Products */,
+				40FA8FCFC45F8523EA6CBE172B2D3627 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E42987BBE2E3B8F08B40775A0867F664 /* MagicTimer */ = {
+			isa = PBXGroup;
+			children = (
+				0E4EDECCEB974BDAD23616FC19D68360 /* Int+Extension.swift */,
+				796E874712B65BCDC70CEAB2A17601BB /* MagicTimer.swift */,
+				0D7A00210E788F4F33CE109AE108E557 /* MagicTimerState.swift */,
+				26054F9C56A0267F2FA0CA862080726C /* MagicTimerView.swift */,
+				96AE43B175B8B5A23CC880546B1BA087 /* MagicTimerViewDelegate.swift */,
+				ACBBB783B47A40B047C58DEF1C7ABC59 /* MGBackgroundCalculator.swift */,
+				694411C76941F0B6F2697225ABD48FFE /* MGCounter.swift */,
+				BC1FA92AEB39BF1C28C23B428A9359DB /* MGLogable.swift */,
+				7C76E8D31282A81C2A3072183B19AC24 /* MGObservable.swift */,
+				8DE850DDD55DBE872D7DE475F8B9B918 /* MGStandardTimerFormatter.swift */,
+				A0CDE476A1DE51EB1C7B551F83448CA9 /* MGStateManager.swift */,
+				DD98AA68CC3317388361DAF69FC4FF3F /* MGTimerExecutive.swift */,
+				6EA960729E24808855C6E71AFE7773A0 /* TimeInterval+Extesnion.swift */,
+				9516619056FF87EFA74325CC58D762F5 /* UIFont+Extension.swift */,
+				8CE5D2C153466733F5F519766854ECBE /* Support Files */,
+			);
+			name = MagicTimer;
+			path = MagicTimer;
+			sourceTree = "<group>";
+		};
+		F6552FA30023FF65BEB2DDF0A7DA1E3D /* Pods-ShiftTracker-ShiftTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BE1337D88453377ED6991BF467031EA /* Pods-ShiftTracker-ShiftTrackerUITests.modulemap */,
+				33CBC1B37B8426319D2D135B91357C42 /* Pods-ShiftTracker-ShiftTrackerUITests-acknowledgements.markdown */,
+				01C8743A5DB4CD939B1B3D2457624F36 /* Pods-ShiftTracker-ShiftTrackerUITests-acknowledgements.plist */,
+				DC16A0D878C172E0B56E89A98C648447 /* Pods-ShiftTracker-ShiftTrackerUITests-dummy.m */,
+				3E1BBDB6D3373D93576FDE29B660AAAD /* Pods-ShiftTracker-ShiftTrackerUITests-frameworks.sh */,
+				137343860C7C1F9284ECC9113D75F60A /* Pods-ShiftTracker-ShiftTrackerUITests-Info.plist */,
+				0F37B09FDC7ED3422F7C0F91867FFDFD /* Pods-ShiftTracker-ShiftTrackerUITests-umbrella.h */,
+				709B63B3A8A24CBA8AA5E9072E9F458A /* Pods-ShiftTracker-ShiftTrackerUITests.debug.xcconfig */,
+				86E239C33DD4BEC9C923DBC6DB85B87C /* Pods-ShiftTracker-ShiftTrackerUITests.release.xcconfig */,
+			);
+			name = "Pods-ShiftTracker-ShiftTrackerUITests";
+			path = "Target Support Files/Pods-ShiftTracker-ShiftTrackerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1C8CBCAFDD86A87B96DB43DF9878F226 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F288FFD3A5F28218CE1F24D2008D29A3 /* Pods-ShiftTracker-ShiftTrackerUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8038C3683DD51CCD8A156EA1BB825DA7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C880226107A5927E156CBC36FD9E5B66 /* Pods-ShiftTracker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA152E5CD4360EE5E8C445313DCD58DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25F0A224ED719E5A3B77185C6003133A /* MagicTimer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C817021F619DD23355056D162E206F39 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA698AB26CBF8E8C5A4464453F927A1E /* Pods-ShiftTrackerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2957EE0871C8F685E1FB2FB52A69E89F /* Pods-ShiftTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 726F57A95EE5931E21EE1772C27D7B69 /* Build configuration list for PBXNativeTarget "Pods-ShiftTracker" */;
+			buildPhases = (
+				8038C3683DD51CCD8A156EA1BB825DA7 /* Headers */,
+				FB622D5EEC5391FDA89E7777B21C68A7 /* Sources */,
+				D17E6D1F24C1DF9240FC3D0A66B952C1 /* Frameworks */,
+				D2732278B79BA2094A14B600E9256BC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				200FF992077BEB50597D9C8718E43070 /* PBXTargetDependency */,
+			);
+			name = "Pods-ShiftTracker";
+			productName = "Pods-ShiftTracker";
+			productReference = 217F504538C692D92ABD368FDDF913B8 /* Pods_ShiftTracker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9A2AFD30069CA32CD2E72E7D9D0E0097 /* MagicTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8729D42CE0EEC3EE86E826BCC1D8CF85 /* Build configuration list for PBXNativeTarget "MagicTimer" */;
+			buildPhases = (
+				BA152E5CD4360EE5E8C445313DCD58DE /* Headers */,
+				D1602B3421248794AA7FBCBB850C8E8F /* Sources */,
+				41C2C7A7080EF8685550533196D56563 /* Frameworks */,
+				CC2E8B524EC93691A5B6ECEDB7496522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagicTimer;
+			productName = MagicTimer;
+			productReference = 0FB114E27F8414106022220B5B533895 /* MagicTimer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AD70101246E7FC2911A3148F13F051EF /* Pods-ShiftTracker-ShiftTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC4FF347F19F0AFE6F4D3A6E6E5873BF /* Build configuration list for PBXNativeTarget "Pods-ShiftTracker-ShiftTrackerUITests" */;
+			buildPhases = (
+				1C8CBCAFDD86A87B96DB43DF9878F226 /* Headers */,
+				C6B550C018C139903D5831D9CD97C6D6 /* Sources */,
+				D63421876AE2471F4C619B00A9AD9356 /* Frameworks */,
+				C53571677FC2D546B2168A0D9FD9E897 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28DA4BAD289165F5D41F6D6F13D3E030 /* PBXTargetDependency */,
+			);
+			name = "Pods-ShiftTracker-ShiftTrackerUITests";
+			productName = "Pods-ShiftTracker-ShiftTrackerUITests";
+			productReference = 984016371473EAE243B5D4F017E4687C /* Pods_ShiftTracker_ShiftTrackerUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C3FB6E3BD0C194386773FBC831DE4206 /* Pods-ShiftTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B848531D669774E19EC82109976B5330 /* Build configuration list for PBXNativeTarget "Pods-ShiftTrackerTests" */;
+			buildPhases = (
+				C817021F619DD23355056D162E206F39 /* Headers */,
+				83BD75E3047328A78F25C187B63894A5 /* Sources */,
+				DA0B7934FF709BA53640FBEF3A55CFD6 /* Frameworks */,
+				E9AAEACF678D98CE69E1B3255268858C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38984F5F9FB7DDA5E16C3D6201080C18 /* PBXTargetDependency */,
+			);
+			name = "Pods-ShiftTrackerTests";
+			productName = "Pods-ShiftTrackerTests";
+			productReference = C5C99B39B0F26D63820439C5D78A7439 /* Pods_ShiftTrackerTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 2A9E8CEA221796E5DD89E380F38D725A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A2AFD30069CA32CD2E72E7D9D0E0097 /* MagicTimer */,
+				2957EE0871C8F685E1FB2FB52A69E89F /* Pods-ShiftTracker */,
+				AD70101246E7FC2911A3148F13F051EF /* Pods-ShiftTracker-ShiftTrackerUITests */,
+				C3FB6E3BD0C194386773FBC831DE4206 /* Pods-ShiftTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C53571677FC2D546B2168A0D9FD9E897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC2E8B524EC93691A5B6ECEDB7496522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2732278B79BA2094A14B600E9256BC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9AAEACF678D98CE69E1B3255268858C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83BD75E3047328A78F25C187B63894A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C4A7CC6D51E1B7675111630A0603A57 /* Pods-ShiftTrackerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B550C018C139903D5831D9CD97C6D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D03CD79B9738A26A361A9FD00D6C13A /* Pods-ShiftTracker-ShiftTrackerUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1602B3421248794AA7FBCBB850C8E8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D01F78EE29D91ABC82BE78FBB7C153A5 /* Int+Extension.swift in Sources */,
+				A3991571B25ABFD84C6589D222F6E08F /* MagicTimer-dummy.m in Sources */,
+				DD802944B0C2F84FE10DB6D5618D9532 /* MagicTimer.swift in Sources */,
+				BD99D800EC6E5968222333611C093A48 /* MagicTimerState.swift in Sources */,
+				6C4C711D098103E5BDAF0751A1E95390 /* MagicTimerView.swift in Sources */,
+				65C1FF8EE39CC65E3133C892B867F792 /* MagicTimerViewDelegate.swift in Sources */,
+				F2C999CC4195F7120330954181BD27E3 /* MGBackgroundCalculator.swift in Sources */,
+				40874DC93392E3A09F6F995C9B842E95 /* MGCounter.swift in Sources */,
+				D55C69DEBC62678891C30125ECDD0100 /* MGLogable.swift in Sources */,
+				EA6805319CFDF2C371B22B335EC8819D /* MGObservable.swift in Sources */,
+				46A226A71EB9C0D238E8B0C6B7C4F145 /* MGStandardTimerFormatter.swift in Sources */,
+				D2F4B985A754591DEEA7FF9BB8E07166 /* MGStateManager.swift in Sources */,
+				FC7708FE6C37760CFB000BEDA8560ADB /* MGTimerExecutive.swift in Sources */,
+				D71417795FAE700606CB367975F832B8 /* TimeInterval+Extesnion.swift in Sources */,
+				52EAFEAB70035E985951E4EA069983B3 /* UIFont+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB622D5EEC5391FDA89E7777B21C68A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07CBE7571C8E3BDE016B638B1E89B49E /* Pods-ShiftTracker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		200FF992077BEB50597D9C8718E43070 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MagicTimer;
+			target = 9A2AFD30069CA32CD2E72E7D9D0E0097 /* MagicTimer */;
+			targetProxy = BD389C72F62C7B5CCB7DDD27C632E42D /* PBXContainerItemProxy */;
+		};
+		28DA4BAD289165F5D41F6D6F13D3E030 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MagicTimer;
+			target = 9A2AFD30069CA32CD2E72E7D9D0E0097 /* MagicTimer */;
+			targetProxy = 561D002A9ED1BC626D8D4F30779C322E /* PBXContainerItemProxy */;
+		};
+		38984F5F9FB7DDA5E16C3D6201080C18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ShiftTracker";
+			target = 2957EE0871C8F685E1FB2FB52A69E89F /* Pods-ShiftTracker */;
+			targetProxy = 2CAC8FCA87A797D440A82CA786D56ECE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01A275945B4AB418066B8EE0E537BBA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA358DD8EC3E3E7E0CDE99DDFC8780CF /* Pods-ShiftTrackerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ShiftTrackerTests/Pods-ShiftTrackerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShiftTrackerTests/Pods-ShiftTrackerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		125C51B0F88E28C868DC90BD45E4E727 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		92A3E9AC052A7345115439021B218E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		95B39469076C7301C2C4BD50D81F55BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F40D679C166F7CDC559998FE617C46CE /* Pods-ShiftTracker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ShiftTracker/Pods-ShiftTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShiftTracker/Pods-ShiftTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9FADAFE86D90B68BADC0685F335D1BFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 709B63B3A8A24CBA8AA5E9072E9F458A /* Pods-ShiftTracker-ShiftTrackerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ShiftTracker-ShiftTrackerUITests/Pods-ShiftTracker-ShiftTrackerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShiftTracker-ShiftTrackerUITests/Pods-ShiftTracker-ShiftTrackerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A0BC1D48AE79E0D21E145C98E32227C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B18069E42E1D60D1C5C8241BE8844DB /* Pods-ShiftTrackerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ShiftTrackerTests/Pods-ShiftTrackerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShiftTrackerTests/Pods-ShiftTrackerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A196253A356C663FF89837C49A51E3DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFC463D527C4A3502302D9312C34D77B /* Pods-ShiftTracker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ShiftTracker/Pods-ShiftTracker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShiftTracker/Pods-ShiftTracker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C47B267AA5A9909D10118E6F887CF29B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86E239C33DD4BEC9C923DBC6DB85B87C /* Pods-ShiftTracker-ShiftTrackerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ShiftTracker-ShiftTrackerUITests/Pods-ShiftTracker-ShiftTrackerUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ShiftTracker-ShiftTrackerUITests/Pods-ShiftTracker-ShiftTrackerUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D039AF49AA5073FDAD8ABFB196EBE916 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33FCD892F07D6B8D8B768EF7E2408E35 /* MagicTimer.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MagicTimer/MagicTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MagicTimer/MagicTimer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MagicTimer/MagicTimer.modulemap";
+				PRODUCT_MODULE_NAME = MagicTimer;
+				PRODUCT_NAME = MagicTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D0EE845A1BD3DB59A546EE44ABA456B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08077C6F0B26A44E97E1394B17E2B89C /* MagicTimer.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MagicTimer/MagicTimer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MagicTimer/MagicTimer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MagicTimer/MagicTimer.modulemap";
+				PRODUCT_MODULE_NAME = MagicTimer;
+				PRODUCT_NAME = MagicTimer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				125C51B0F88E28C868DC90BD45E4E727 /* Debug */,
+				92A3E9AC052A7345115439021B218E3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		726F57A95EE5931E21EE1772C27D7B69 /* Build configuration list for PBXNativeTarget "Pods-ShiftTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95B39469076C7301C2C4BD50D81F55BB /* Debug */,
+				A196253A356C663FF89837C49A51E3DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8729D42CE0EEC3EE86E826BCC1D8CF85 /* Build configuration list for PBXNativeTarget "MagicTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D039AF49AA5073FDAD8ABFB196EBE916 /* Debug */,
+				D0EE845A1BD3DB59A546EE44ABA456B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B848531D669774E19EC82109976B5330 /* Build configuration list for PBXNativeTarget "Pods-ShiftTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01A275945B4AB418066B8EE0E537BBA2 /* Debug */,
+				A0BC1D48AE79E0D21E145C98E32227C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC4FF347F19F0AFE6F4D3A6E6E5873BF /* Build configuration list for PBXNativeTarget "Pods-ShiftTracker-ShiftTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FADAFE86D90B68BADC0685F335D1BFF /* Debug */,
+				C47B267AA5A9909D10118E6F887CF29B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

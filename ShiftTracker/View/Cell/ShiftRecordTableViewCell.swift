@@ -9,8 +9,7 @@ import UIKit
 
 class ShiftRecordTableViewCell: UITableViewCell {
 
-  
-    @IBOutlet weak var randomImage: UIImageView!
+    @IBOutlet weak var shiftImageView: UIImageView!
     @IBOutlet weak var shiftDate: UILabel!
     @IBOutlet weak var shiftDuration: UILabel!
     

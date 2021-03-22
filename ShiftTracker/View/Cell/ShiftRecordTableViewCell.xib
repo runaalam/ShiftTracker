@@ -23,7 +23,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="3rd-5r-1nF"/>
-                                    <constraint firstAttribute="height" constant="100" id="DFa-dw-R2J"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="O9r-6U-emk">
@@ -64,10 +63,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imageView" destination="AZr-H7-eki" id="nOh-Ae-aNc"/>
-                <outlet property="randomImage" destination="AZr-H7-eki" id="vMf-HD-zIe"/>
                 <outlet property="shiftDate" destination="Rky-s8-Oql" id="LaU-w5-3Zs"/>
                 <outlet property="shiftDuration" destination="ZhQ-l2-Ulk" id="fN6-6w-wAS"/>
+                <outlet property="shiftImageView" destination="AZr-H7-eki" id="mWJ-zy-tqJ"/>
             </connections>
             <point key="canvasLocation" x="197.82608695652175" y="18.75"/>
         </tableViewCell>

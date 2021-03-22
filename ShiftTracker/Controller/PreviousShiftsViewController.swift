@@ -14,25 +14,35 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
 //    private var previousShiftsVM : PreviousShiftsViewModel!
     
     var shifts : PreviousShifts = []
+    var webLinkImages : [WebLinkImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        self.tableView.rowHeight = UITableView.automaticDimension
-        loadALLPreviousShifts()
+        self.tableView.rowHeight = 120
+        self.loadAllPreviousShifts()
     }
     
-    func loadALLPreviousShifts(){
+    func loadAllPreviousShifts(){
         DeputyApiClient.requestForGetPreviusShifts(completionHandler: {[self]shifts, error in
                 if !shifts!.isEmpty {
                     self.shifts = shifts!
                     DispatchQueue.main.async {
+                        loadWebLinkImage()
                         self.tableView.reloadData()
                     }
                 }
         })
     }
+    
+    func loadWebLinkImage(){
+        for shift in shifts {
+            let webImage = WebLinkImage(id: shift.id, url: URL(string: shift.image)!)
+            webLinkImages.append(webImage)
+        }
+    }
+    
     //MARK: - TableViewDelegate methods
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,6 +59,9 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
         
         cell.shiftDate!.text = self.getDate(dateStr: shifts[indexPath.row].start)
         cell.shiftDuration!.text = self.getShiftDuration(start: shifts[indexPath.row].start, end: shifts[indexPath.row].end)
+        let  webImage : WebLinkImage = webLinkImages[indexPath.row]
+        cell.shiftImageView.image = webImage.image
+        
         return cell
     }
     

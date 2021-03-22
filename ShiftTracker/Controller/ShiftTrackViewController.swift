@@ -11,7 +11,6 @@ import CoreLocation
 import MagicTimer
 
 class ShiftTrackViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, MagicTimerViewDelegate {
-    let widgetLocation = WidgetLocationManager()
     
     @IBOutlet weak var shiftStarButton: UIButton!
     @IBOutlet weak var shiftEndButton: UIButton!
@@ -19,7 +18,10 @@ class ShiftTrackViewController: UIViewController, CLLocationManagerDelegate, MKM
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var timer: MagicTimerView!
-   
+    
+    let widgetLocation = WidgetLocationManager()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
@@ -108,6 +110,6 @@ class ShiftTrackViewController: UIViewController, CLLocationManagerDelegate, MKM
             }
             
             return pinView
-        }
+    }
 }
 

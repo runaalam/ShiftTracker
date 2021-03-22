@@ -1,0 +1,6 @@
+framework module Pods_ShiftTracker_ShiftTrackerUITests {
+  umbrella header "Pods-ShiftTracker-ShiftTrackerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
