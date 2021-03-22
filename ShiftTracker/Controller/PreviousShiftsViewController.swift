@@ -67,11 +67,21 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     
     //
     func getDate(dateStr: String)-> String {
-        Utility.getDateFromISO8601(string: dateStr, formate: Constants.Formate_Shift_Date)
+        if dateStr == "" {
+            return " "
+            
+        } else {
+            return Utility.getDateFromISO8601(string: dateStr, formate: Constants.Formate_Shift_Date)
+        }
     }
     
     func getShiftDuration(start:String, end:String)-> String{
-        let duration = "Worked:  " + Utility.getDateFromISO8601(string: start, formate: Constants.Formate_Shift_Time) + " - " + Utility.getDateFromISO8601(string: end, formate: Constants.Formate_Shift_Time)
+        var duration = "Worked:  " + Utility.getDateFromISO8601(string: start, formate: Constants.Formate_Shift_Time) + " - " 
+        if end == "" {
+            duration = duration + "In progress"
+        } else {
+            duration = duration + Utility.getDateFromISO8601(string: end, formate: Constants.Formate_Shift_Time)
+        }
         return duration
     }
 }

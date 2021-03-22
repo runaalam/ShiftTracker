@@ -81,6 +81,8 @@ class DeputyApiClient {
             do {
                 let responseObject = try JSONDecoder().decode(responseType.self, from: data)
                 DispatchQueue.main.async {
+                    print("======================")
+                    print(responseObject)
                     completion(responseObject, nil)
                 }
             } catch {
