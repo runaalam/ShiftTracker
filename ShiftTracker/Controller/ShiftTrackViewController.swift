@@ -94,6 +94,8 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
             DeputyApiClient.requestForPostShift(shiftUrl: url, shift: shift!, completionHandler: {success, error in
                 if success {
                     print("Susscessfuly saved shift record")
+                } else {
+                    print(error as Any)
                 }
             })
         })

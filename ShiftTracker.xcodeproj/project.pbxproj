@@ -12,6 +12,7 @@
 		9A6B50F14BFBEF09D05EB285 /* Pods_ShiftTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A84EF03EE8F996F4DBE4FA0 /* Pods_ShiftTrackerTests.framework */; };
 		EC20C4EC2608329A00780F15 /* ShiftRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20C4EB2608329A00780F15 /* ShiftRecordViewModel.swift */; };
 		EC20C501260849E100780F15 /* MagicTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC20C500260849E100780F15 /* MagicTimer.framework */; };
+		EC20C527260948C300780F15 /* ShiftTrackVCUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20C526260948C300780F15 /* ShiftTrackVCUnitTest.swift */; };
 		EC84063C2604C41200739232 /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84063B2604C41200739232 /* DateUtility.swift */; };
 		EC8406502605663600739232 /* PreviousShifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84064F2605663600739232 /* PreviousShifts.swift */; };
 		EC840672260618B800739232 /* PreviousShiftsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC840671260618B800739232 /* PreviousShiftsViewModel.swift */; };
@@ -60,6 +61,7 @@
 		DE04144D8A12378C3CF8BF05 /* Pods-ShiftTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiftTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-ShiftTrackerTests/Pods-ShiftTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EC20C4EB2608329A00780F15 /* ShiftRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftRecordViewModel.swift; sourceTree = "<group>"; };
 		EC20C500260849E100780F15 /* MagicTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MagicTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC20C526260948C300780F15 /* ShiftTrackVCUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftTrackVCUnitTest.swift; sourceTree = "<group>"; };
 		EC84063B2604C41200739232 /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
 		EC84064F2605663600739232 /* PreviousShifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousShifts.swift; sourceTree = "<group>"; };
 		EC840671260618B800739232 /* PreviousShiftsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousShiftsViewModel.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		FDA52B242602C5FE00D26832 /* ShiftTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				EC20C526260948C300780F15 /* ShiftTrackVCUnitTest.swift */,
 				FDA52B252602C5FE00D26832 /* ShiftTrackerTests.swift */,
 				FDA52B272602C5FE00D26832 /* Info.plist */,
 			);
@@ -533,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDA52B262602C5FE00D26832 /* ShiftTrackerTests.swift in Sources */,
+				EC20C527260948C300780F15 /* ShiftTrackVCUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
