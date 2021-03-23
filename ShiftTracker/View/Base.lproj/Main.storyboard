@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Sdp-TZ-TAJ">
-                                <rect key="frame" x="50" y="124" width="314" height="199"/>
+                                <rect key="frame" x="50" y="124" width="314" height="135"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Z6f-Hv-Img">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="50"/>
@@ -92,14 +92,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0G-ZQ-oof">
-                                        <rect key="frame" x="0.0" y="85" width="314" height="29"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWp-wL-kFf" customClass="MagicTimerView" customModule="MagicTimer">
-                                        <rect key="frame" x="57" y="149" width="200" height="50"/>
+                                        <rect key="frame" x="57" y="85" width="200" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="52j-Lb-gWd"/>
@@ -118,12 +112,11 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="m0G-ZQ-oof" firstAttribute="leading" secondItem="Sdp-TZ-TAJ" secondAttribute="leading" id="PCV-HL-XmX"/>
                                     <constraint firstItem="Z6f-Hv-Img" firstAttribute="leading" secondItem="Sdp-TZ-TAJ" secondAttribute="leading" id="xYd-ZT-Ob5"/>
                                 </constraints>
                             </stackView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bva-gM-jfd">
-                                <rect key="frame" x="50" y="353" width="314" height="440"/>
+                                <rect key="frame" x="50" y="289" width="314" height="504"/>
                             </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="140-Sx-vgw"/>
@@ -145,7 +138,6 @@
                         <outlet property="shiftEndButton" destination="pyS-Y7-lNp" id="QFs-po-afv"/>
                         <outlet property="shiftStarButton" destination="17N-fU-MDb" id="PY3-hL-MAJ"/>
                         <outlet property="timer" destination="zWp-wL-kFf" id="R33-u1-DVn"/>
-                        <outlet property="timerLabel" destination="m0G-ZQ-oof" id="GmS-v1-YE1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JJt-A9-fz9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

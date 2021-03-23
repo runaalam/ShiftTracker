@@ -7,12 +7,13 @@
 
 import UIKit
 
-class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate {
    
     @IBOutlet weak var tableView: UITableView!
         
     var displayShifts : [ShiftRecordViewModel] = []
     var activityIndicator = UIActivityIndicatorView(style: .large)
+    var needUpdate = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,14 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
         setActivityIndicator(view: self.view)
         activateActivityIndicator(value: true)
         loadAllShifts()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if needUpdate {
+            activateActivityIndicator(value: true)
+            loadAllShifts()
+            needUpdate = false
+        }
     }
     
     func tableViewSetUp(){
@@ -75,4 +84,3 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
         return cell
     }
 }
-

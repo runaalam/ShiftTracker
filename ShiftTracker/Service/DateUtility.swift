@@ -21,13 +21,9 @@ struct DateUtility {
     static func getDateFromISO8601(string: String, formate: String)-> String{
         let isoFormatter = ISO8601DateFormatter()
         if let date = isoFormatter.date(from: string){
-            
-            print(date as Any)
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = formate
             let dateStr = dateFormatter.string(from: date)
-            print("======")
-            print(dateStr as Any)
             return dateStr
         } else {
             return ""
@@ -44,7 +40,8 @@ struct DateUtility {
     //This method call getDateFromISO8601() to return display string that has start and end time status
     static func getShiftDuration(start:String, end:String)-> String{
         var duration = ""
-        if start == "" {
+        
+        if start != "" {
             duration = duration + "Worked:  " + DateUtility.getDateFromISO8601(string: start, formate: Constants.Formate_Shift_Time) + " - "
         }
         

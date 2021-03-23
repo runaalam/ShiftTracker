@@ -10,23 +10,16 @@ import MapKit
 import CoreLocation
 import MagicTimer
 
-protocol ShiftTrackDelegate {
-    func addShift()
-}
-
 class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
     
     @IBOutlet weak var shiftStarButton: UIButton!
     @IBOutlet weak var shiftEndButton: UIButton!
-    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var timer: MagicTimerView!
     
     let widgetLocation = WidgetLocationManager()
     
     let defaults = UserDefaults.standard
-    
-  //  var delegate : ShiftTrackDelegate?
     
     enum ShiftStstus: String {
         case start, end
@@ -38,7 +31,6 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
         super.viewDidLoad()
         setMap()
         setTimmer()
-       // toggleShiftButton(senderButton: shiftEndButton, otherButton: shiftStarButton)
     }
         
     // MARK: - IBAction
@@ -79,12 +71,10 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
             timer.resetToDefault()
             timer.startCounting()
             url = DeputyApiClient.Endpoints.shiftStart.url
-            defaults.set(Constants.Message_Shift_Started, forKey: "Shift")
         case .end:
             toggleShiftButton(senderButton: shiftEndButton, otherButton: shiftStarButton)
             timer.stopCounting()
             url = DeputyApiClient.Endpoints.shiftEnd.url
-            defaults.set(Constants.Message_Shift_Ended, forKey: "Shift")
         }
         if url != nil {
             saveShiftRecord(url: url!)
@@ -99,10 +89,10 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
         let clStatus = widgetLocation.manager!.authorizationStatus
         
         createShiftDataToSave(authorizationStatus: clStatus, completionHandler: {shift in
-            DeputyApiClient.requestForPostShift(shiftUrl: url, shift: shift!, completionHandler: {success, error in
+            DeputyApiClient.requestForPostShift(shiftUrl: url, shift: shift!, completionHandler: { [self]success, error in
                 if success {
-                    //delegate!.addShift()
                     print("Susscessfuly saved shift record")
+                    updateOtherVc()
                 } else {
                     print(error as Any)
                 }
@@ -124,6 +114,12 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
                 completionHandler(shift)
             })
         }
+    }
+   
+    //Update preview list after added new shift
+    func updateOtherVc(){
+        let secondTab = self.tabBarController?.viewControllers![1] as! PreviousShiftsViewController
+        secondTab.needUpdate = true
     }
 }
 
