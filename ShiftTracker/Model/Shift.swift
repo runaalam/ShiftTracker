@@ -25,6 +25,7 @@ class Shift {
         self.longitude = "0.00000"
     }
     
+    ///Create JSON data from this model data
     func createJsonData()-> String {
         let jsonText = "{\"time\": \"\(self.time)\", \"latitude\": \"\(self.latitude)\", \"longitude\": \"\(self.longitude)\"}"
         return jsonText

@@ -8,6 +8,7 @@
 import Foundation
 import CoreLocation
 
+///Wrapper class for CLLocationManager
 class WidgetLocationManager: NSObject, CLLocationManagerDelegate {
     var manager: CLLocationManager?
     private var handler: ((CLLocation) -> Void)?
@@ -22,7 +23,7 @@ class WidgetLocationManager: NSObject, CLLocationManagerDelegate {
             }
         }
     }
-    
+    ///call this method to fetch current location
     func fetchLocation(handler: @escaping (_ location : CLLocation) -> Void) {
         self.handler = handler
         self.manager!.requestLocation()

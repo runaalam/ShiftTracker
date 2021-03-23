@@ -9,7 +9,7 @@ import Foundation
 
 class DeputyApiClient {
     
-    //URL Endpoint
+    ///URL Endpoint
     enum Endpoints {
         case shiftStart
         case shiftEnd
@@ -31,13 +31,13 @@ class DeputyApiClient {
         }
     }
     
-    //Methods Used in Deputy Api
+    ///Methods Used in Deputy Api
     enum HTTPMethod: String {
           case get = "GET"
           case post = "POST"
     }
     
-    //Post request for shift start and end
+    ///Service method for shift post that communicate generic HTTP Request Method for Deputy Api
     class func requestForPostShift(shiftUrl: URL, shift: Shift, completionHandler: @escaping (_ success: Bool, _ error: Error?) -> Void) {
         let bodyText = shift.createJsonData()
        
@@ -55,7 +55,7 @@ class DeputyApiClient {
         }
     }
     
-    //Get request for load all previous shift record
+    ///Service method to get all previous shift records
     class func requestForGetPreviusShifts(completionHandler: @escaping ( _ previuosShifts:[ShiftRecordViewModel]?,_ error: Error?) -> Void) {
         let url = Endpoints.previousShifts.url
         let bodyText = ""
@@ -71,7 +71,7 @@ class DeputyApiClient {
         })
     }
     
-    // Generic HTTP Request Methods that works for Get and Post request
+    /// Generic HTTP Request Methods that works for Get and Post request
     class func taskForRequest<ResponseType: Decodable>(url: URL, httpMethod: String, responseType: ResponseType.Type, body: String, completion: @escaping (ResponseType?, Error?) -> Void) {
 
         var request = URLRequest(url: url)

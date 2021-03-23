@@ -67,12 +67,12 @@
 		0D7A00210E788F4F33CE109AE108E557 /* MagicTimerState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MagicTimerState.swift; path = MagicTimer/Classes/MagicTimerState.swift; sourceTree = "<group>"; };
 		0E4EDECCEB974BDAD23616FC19D68360 /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "MagicTimer/Classes/Int+Extension.swift"; sourceTree = "<group>"; };
 		0F37B09FDC7ED3422F7C0F91867FFDFD /* Pods-ShiftTracker-ShiftTrackerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ShiftTracker-ShiftTrackerUITests-umbrella.h"; sourceTree = "<group>"; };
-		0FB114E27F8414106022220B5B533895 /* MagicTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MagicTimer.framework; path = MagicTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FB114E27F8414106022220B5B533895 /* MagicTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MagicTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		137343860C7C1F9284ECC9113D75F60A /* Pods-ShiftTracker-ShiftTrackerUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShiftTracker-ShiftTrackerUITests-Info.plist"; sourceTree = "<group>"; };
 		190233D2292AFF9C9CFC5F68260601E4 /* Pods-ShiftTrackerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ShiftTrackerTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		19CFAE17FCA22BA152DFF3C046694F65 /* Pods-ShiftTrackerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShiftTrackerTests-dummy.m"; sourceTree = "<group>"; };
 		1BAC89D31BAE0A112D505A593BF1A67D /* Pods-ShiftTracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ShiftTracker.modulemap"; sourceTree = "<group>"; };
-		217F504538C692D92ABD368FDDF913B8 /* Pods_ShiftTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ShiftTracker.framework; path = "Pods-ShiftTracker.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		217F504538C692D92ABD368FDDF913B8 /* Pods_ShiftTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiftTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26054F9C56A0267F2FA0CA862080726C /* MagicTimerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MagicTimerView.swift; path = MagicTimer/Classes/MagicTimerView.swift; sourceTree = "<group>"; };
 		2BE1337D88453377ED6991BF467031EA /* Pods-ShiftTracker-ShiftTrackerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ShiftTracker-ShiftTrackerUITests.modulemap"; sourceTree = "<group>"; };
 		33CBC1B37B8426319D2D135B91357C42 /* Pods-ShiftTracker-ShiftTrackerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ShiftTracker-ShiftTrackerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 		8DE850DDD55DBE872D7DE475F8B9B918 /* MGStandardTimerFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGStandardTimerFormatter.swift; path = MagicTimer/Classes/MGStandardTimerFormatter.swift; sourceTree = "<group>"; };
 		9516619056FF87EFA74325CC58D762F5 /* UIFont+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+Extension.swift"; path = "MagicTimer/Classes/UIFont+Extension.swift"; sourceTree = "<group>"; };
 		96AE43B175B8B5A23CC880546B1BA087 /* MagicTimerViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MagicTimerViewDelegate.swift; path = MagicTimer/Classes/MagicTimerViewDelegate.swift; sourceTree = "<group>"; };
-		984016371473EAE243B5D4F017E4687C /* Pods_ShiftTracker_ShiftTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ShiftTracker_ShiftTrackerUITests.framework; path = "Pods-ShiftTracker-ShiftTrackerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		984016371473EAE243B5D4F017E4687C /* Pods_ShiftTracker_ShiftTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiftTracker_ShiftTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0CDE476A1DE51EB1C7B551F83448CA9 /* MGStateManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGStateManager.swift; path = MagicTimer/Classes/MGStateManager.swift; sourceTree = "<group>"; };
 		A14A845AC6CFC6922CD3CF8A52E54B91 /* Pods-ShiftTracker-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ShiftTracker-frameworks.sh"; sourceTree = "<group>"; };
 		ACBBB783B47A40B047C58DEF1C7ABC59 /* MGBackgroundCalculator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGBackgroundCalculator.swift; path = MagicTimer/Classes/MGBackgroundCalculator.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 		BC1FA92AEB39BF1C28C23B428A9359DB /* MGLogable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGLogable.swift; path = MagicTimer/Classes/MGLogable.swift; sourceTree = "<group>"; };
 		BCFD15F20B3FCCE193F2ECEC3442B566 /* Pods-ShiftTracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShiftTracker-dummy.m"; sourceTree = "<group>"; };
 		BD27A1A8A6E04C834768AE1C91327BB8 /* Pods-ShiftTrackerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ShiftTrackerTests-umbrella.h"; sourceTree = "<group>"; };
-		C5C99B39B0F26D63820439C5D78A7439 /* Pods_ShiftTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ShiftTrackerTests.framework; path = "Pods-ShiftTrackerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5C99B39B0F26D63820439C5D78A7439 /* Pods_ShiftTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiftTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		DC16A0D878C172E0B56E89A98C648447 /* Pods-ShiftTracker-ShiftTrackerUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ShiftTracker-ShiftTrackerUITests-dummy.m"; sourceTree = "<group>"; };
 		DD98AA68CC3317388361DAF69FC4FF3F /* MGTimerExecutive.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MGTimerExecutive.swift; path = MagicTimer/Classes/MGTimerExecutive.swift; sourceTree = "<group>"; };
@@ -278,7 +278,6 @@
 				9516619056FF87EFA74325CC58D762F5 /* UIFont+Extension.swift */,
 				8CE5D2C153466733F5F519766854ECBE /* Support Files */,
 			);
-			name = MagicTimer;
 			path = MagicTimer;
 			sourceTree = "<group>";
 		};
@@ -419,7 +418,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
@@ -913,7 +912,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MagicTimer/MagicTimer-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MagicTimer/MagicTimer-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -948,7 +947,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MagicTimer/MagicTimer-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MagicTimer/MagicTimer-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
