@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import CoreLocation
 @testable import ShiftTracker
 
 class ShiftTrackVCUnitTest: XCTestCase {
@@ -45,5 +46,13 @@ class ShiftTrackVCUnitTest: XCTestCase {
         //Test fail - sender true and other false
         //Test fail - sender false and other false
         //Test fail - sender false and other true
+    }
+    
+    //test for cretae shift data before save even in user denied to access the location
+    func testCreateShiftDataToSave() {
+        let status = CLAuthorizationStatus.denied
+        controller.createShiftDataToSave(authorizationStatus: status, completionHandler: {shift in
+           XCTAssertNotNil(shift)
+        })
     }
 }

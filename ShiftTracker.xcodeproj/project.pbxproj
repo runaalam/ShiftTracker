@@ -13,6 +13,7 @@
 		EC20C4EC2608329A00780F15 /* ShiftRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20C4EB2608329A00780F15 /* ShiftRecordViewModel.swift */; };
 		EC20C501260849E100780F15 /* MagicTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC20C500260849E100780F15 /* MagicTimer.framework */; };
 		EC20C527260948C300780F15 /* ShiftTrackVCUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20C526260948C300780F15 /* ShiftTrackVCUnitTest.swift */; };
+		EC20C52F260963FB00780F15 /* DateUtilityUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC20C52E260963FB00780F15 /* DateUtilityUnitTest.swift */; };
 		EC84063C2604C41200739232 /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84063B2604C41200739232 /* DateUtility.swift */; };
 		EC8406502605663600739232 /* PreviousShifts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC84064F2605663600739232 /* PreviousShifts.swift */; };
 		EC840672260618B800739232 /* PreviousShiftsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC840671260618B800739232 /* PreviousShiftsViewModel.swift */; };
@@ -24,7 +25,6 @@
 		FDA52B162602C5FA00D26832 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA52B142602C5FA00D26832 /* Main.storyboard */; };
 		FDA52B182602C5FE00D26832 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDA52B172602C5FE00D26832 /* Assets.xcassets */; };
 		FDA52B1B2602C5FE00D26832 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA52B192602C5FE00D26832 /* LaunchScreen.storyboard */; };
-		FDA52B262602C5FE00D26832 /* ShiftTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA52B252602C5FE00D26832 /* ShiftTrackerTests.swift */; };
 		FDA52B312602C5FE00D26832 /* ShiftTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA52B302602C5FE00D26832 /* ShiftTrackerUITests.swift */; };
 		FDA52B4E2602C6C900D26832 /* DeputyApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA52B4D2602C6C900D26832 /* DeputyApiClient.swift */; };
 		FDA52B562602C73300D26832 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA52B552602C73300D26832 /* ErrorResponse.swift */; };
@@ -62,6 +62,7 @@
 		EC20C4EB2608329A00780F15 /* ShiftRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftRecordViewModel.swift; sourceTree = "<group>"; };
 		EC20C500260849E100780F15 /* MagicTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MagicTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC20C526260948C300780F15 /* ShiftTrackVCUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftTrackVCUnitTest.swift; sourceTree = "<group>"; };
+		EC20C52E260963FB00780F15 /* DateUtilityUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilityUnitTest.swift; sourceTree = "<group>"; };
 		EC84063B2604C41200739232 /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
 		EC84064F2605663600739232 /* PreviousShifts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousShifts.swift; sourceTree = "<group>"; };
 		EC840671260618B800739232 /* PreviousShiftsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousShiftsViewModel.swift; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		FDA52B1A2602C5FE00D26832 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDA52B1C2602C5FE00D26832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDA52B212602C5FE00D26832 /* ShiftTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiftTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FDA52B252602C5FE00D26832 /* ShiftTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftTrackerTests.swift; sourceTree = "<group>"; };
 		FDA52B272602C5FE00D26832 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDA52B2C2602C5FE00D26832 /* ShiftTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiftTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDA52B302602C5FE00D26832 /* ShiftTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftTrackerUITests.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				EC20C526260948C300780F15 /* ShiftTrackVCUnitTest.swift */,
-				FDA52B252602C5FE00D26832 /* ShiftTrackerTests.swift */,
+				EC20C52E260963FB00780F15 /* DateUtilityUnitTest.swift */,
 				FDA52B272602C5FE00D26832 /* Info.plist */,
 			);
 			path = ShiftTrackerTests;
@@ -535,7 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDA52B262602C5FE00D26832 /* ShiftTrackerTests.swift in Sources */,
+				EC20C52F260963FB00780F15 /* DateUtilityUnitTest.swift in Sources */,
 				EC20C527260948C300780F15 /* ShiftTrackVCUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

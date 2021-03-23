@@ -1,15 +1,16 @@
 //
-//  ShiftTrackerTests.swift
+//  DateUtilityUnitTest.swift
 //  ShiftTrackerTests
 //
-//  Created by Runa Alam on 18/3/21.
+//  Created by Runa Alam on 23/3/21.
 //
 
 import XCTest
 @testable import ShiftTracker
 
-class ShiftTrackerTests: XCTestCase {
-
+class DateUtilityUnitTest: XCTestCase {
+    let unit = DateUtility()
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -28,6 +29,19 @@ class ShiftTrackerTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    //Test case - alway pass current date string so It can not be nil
+    func testGetCurrentDateTimeString() {
+        let instance = DateUtility.getCurrentDateTimeString()
+        XCTAssertNotNil(instance)
+    }
+    
+    
+    //Test case what ever input is if unable to parse date will handle nil value and pass empty string
+    func testGetDateFromISO8601() {
+        let dateStr = DateUtility.getShiftDuration(start: "2021-03-19 22:36:42 +0000", end: "")
+        XCTAssertEqual("", dateStr)
     }
 
 }

@@ -36,4 +36,6 @@ struct ShiftRecordViewModel {
             }
         }
     }
+    
+    
 }

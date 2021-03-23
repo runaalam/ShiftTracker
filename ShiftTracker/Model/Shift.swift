@@ -19,6 +19,12 @@ class Shift {
         self.longitude = longitude
     }
     
+    init(time: String) {
+        self.time = time
+        self.latitude = "0.00000"
+        self.longitude = "0.00000"
+    }
+    
     func createJsonData()-> String {
         let jsonText = "{\"time\": \"\(self.time)\", \"latitude\": \"\(self.latitude)\", \"longitude\": \"\(self.longitude)\"}"
         return jsonText

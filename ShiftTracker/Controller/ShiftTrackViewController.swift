@@ -90,7 +90,9 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
     
     //Save shift record
     func saveShiftRecord(url: URL) {
-        createShiftDataToSave(completionHandler: {shift in
+        let clStatus = widgetLocation.manager!.authorizationStatus
+        
+        createShiftDataToSave(authorizationStatus: clStatus, completionHandler: {shift in
             DeputyApiClient.requestForPostShift(shiftUrl: url, shift: shift!, completionHandler: {success, error in
                 if success {
                     print("Susscessfuly saved shift record")
@@ -102,20 +104,16 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
     }
     
     //Prepare data to save
-    func createShiftDataToSave(completionHandler: @escaping (_ shift : Shift?) -> Void){
+    func createShiftDataToSave(authorizationStatus: CLAuthorizationStatus, completionHandler: @escaping (_ shift : Shift?) -> Void){
         let shiftTime = DateUtility.getCurrentDateTimeString()
-        var shiftLat = "0.00000"
-        var  shiftLon = "0.00000"
         
-        if widgetLocation.manager!.authorizationStatus == .denied || widgetLocation.manager!.authorizationStatus == .restricted {
-            let shift = Shift(time: shiftTime, latitude: shiftLat, longitude: shiftLon)
+        switch authorizationStatus {
+        case .denied,.restricted:
+            let shift = Shift(time: shiftTime)
             completionHandler(shift)
-        } else {
-            
+        default:
             widgetLocation.fetchLocation(handler: { location in
-                shiftLat = String(location.coordinate.latitude)
-                shiftLon = String(location.coordinate.longitude)
-                let shift = Shift(time: shiftTime, latitude: shiftLat, longitude: shiftLon)
+                let shift = Shift(time: shiftTime, latitude: String(location.coordinate.latitude), longitude: String(location.coordinate.longitude))
                 completionHandler(shift)
             })
         }
