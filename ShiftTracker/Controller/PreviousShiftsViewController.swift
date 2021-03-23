@@ -12,8 +12,8 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var tableView: UITableView!
         
     //Array to display shift record in table view
-    var displayShifts : [ShiftRecordViewModel] = []
-    
+    var displayShifts : [ShiftRecord] = []
+
     //ActivityIndicator initialization
     var activityIndicator = UIActivityIndicatorView(style: .large)
     
@@ -50,9 +50,9 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     
     ///Call this function to load all data for ShiftRecord to display in TableView
     func loadAllShifts(){
-        DeputyApiClient.requestForGetPreviusShifts(completionHandler: {displayShifts, error in
-            if !displayShifts!.isEmpty {
-                self.displayShifts = displayShifts!
+        DeputyApiClient.requestForGetPreviusShifts(completionHandler: {shifts, error in
+            if !shifts!.isEmpty {
+                self.displayShifts = shifts!
                 DispatchQueue.main.async { [self] in
                     self.tableView.reloadData()
                     activateActivityIndicator(value: false)
@@ -60,6 +60,7 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
             }
         })
     }
+    
     //MARK: - Methods for ActivityIndicator
     
     //Set ActivityIndicator to the view
@@ -99,9 +100,10 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
         
         let cell = Bundle.main.loadNibNamed("ShiftRecordTableViewCell", owner: self, options: nil)?.first as! ShiftRecordTableViewCell
         
-        cell.shiftDate!.text = displayShifts[indexPath.row].date
-        cell.shiftDuration!.text = displayShifts[indexPath.row].duration
-        cell.shiftImageView.image = displayShifts[indexPath.row].image
+        cell.shiftDate.text = DateUtility.getDate(dateStr: displayShifts[indexPath.row].start)
+        cell.shiftDuration.text = DateUtility.getShiftDuration(start: displayShifts[indexPath.row].start, end: displayShifts[indexPath.row].end)
+        cell.shiftImageView.setImageFromUrl(ImageURL: displayShifts[indexPath.row].image)
+        
         return cell
     }
 }
