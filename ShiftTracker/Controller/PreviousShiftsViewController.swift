@@ -44,10 +44,10 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func loadAllShifts(){
-        DeputyApiClient.requestForGetPreviusShifts(completionHandler: {[self] displayShifts, error in
+        DeputyApiClient.requestForGetPreviusShifts(completionHandler: {displayShifts, error in
             if !displayShifts!.isEmpty {
                 self.displayShifts = displayShifts!
-                DispatchQueue.main.async {
+                DispatchQueue.main.async { [self] in
                     self.tableView.reloadData()
                     activateActivityIndicator(value: false)
                 }
@@ -75,3 +75,4 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
         return cell
     }
 }
+

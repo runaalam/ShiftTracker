@@ -91,7 +91,7 @@ class DeputyApiClient {
             do {
                 let responseObject = try JSONDecoder().decode(responseType.self, from: data)
                 DispatchQueue.main.async {
-                    print("======================")
+                    print("========== 1 ============")
                     print(responseObject)
                     completion(responseObject, nil)
                 }
@@ -99,11 +99,13 @@ class DeputyApiClient {
                 do {
                     let errorResponse = try JSONDecoder().decode(ErrorResponse.self, from: data) as Error
                     DispatchQueue.main.async {
+                        print("=========== 2 ===========")
                         print(errorResponse)
                         completion(nil, errorResponse)
                     }
                 } catch {
                     DispatchQueue.main.async {
+                        print("=========== 3 ===========")
                         print(error)
                         completion(nil, error)
                     }

@@ -43,7 +43,11 @@ struct DateUtility {
     
     //This method call getDateFromISO8601() to return display string that has start and end time status
     static func getShiftDuration(start:String, end:String)-> String{
-        var duration = "Worked:  " + DateUtility.getDateFromISO8601(string: start, formate: Constants.Formate_Shift_Time) + " - "
+        var duration = ""
+        if start == "" {
+            duration = duration + "Worked:  " + DateUtility.getDateFromISO8601(string: start, formate: Constants.Formate_Shift_Time) + " - "
+        }
+        
         if end == "" {
             duration = duration + "In progress"
         } else {

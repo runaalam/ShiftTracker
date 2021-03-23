@@ -10,6 +10,10 @@ import MapKit
 import CoreLocation
 import MagicTimer
 
+protocol ShiftTrackDelegate {
+    func addShift()
+}
+
 class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
     
     @IBOutlet weak var shiftStarButton: UIButton!
@@ -21,6 +25,8 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
     let widgetLocation = WidgetLocationManager()
     
     let defaults = UserDefaults.standard
+    
+  //  var delegate : ShiftTrackDelegate?
     
     enum ShiftStstus: String {
         case start, end
@@ -95,6 +101,7 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
         createShiftDataToSave(authorizationStatus: clStatus, completionHandler: {shift in
             DeputyApiClient.requestForPostShift(shiftUrl: url, shift: shift!, completionHandler: {success, error in
                 if success {
+                    //delegate!.addShift()
                     print("Susscessfuly saved shift record")
                 } else {
                     print(error as Any)

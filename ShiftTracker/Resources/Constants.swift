@@ -22,6 +22,7 @@ struct Constants {
     static let Message_Shift_Ended = "End shift - All good"
     static let Message_Shift_Inprogress = "Shift already in progress"
     static let Message_Shift_Not_Inprogress = "No shift started to be closed"
+    static let Message_Request_Fail = "Woof woof - Bad baad baaad shift"
     
     static let Formate_Shift_Date = "dd MMM YYYY"
     static let Formate_Shift_Time = "h:mm a"
