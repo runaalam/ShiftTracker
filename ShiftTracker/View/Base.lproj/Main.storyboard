@@ -95,9 +95,6 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWp-wL-kFf" customClass="MagicTimerView" customModule="MagicTimer">
                                         <rect key="frame" x="57" y="85" width="200" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="52j-Lb-gWd"/>
-                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
                                                 <real key="value" value="18"/>

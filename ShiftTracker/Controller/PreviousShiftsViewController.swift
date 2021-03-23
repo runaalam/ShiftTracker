@@ -48,10 +48,7 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
         self.tableView.rowHeight = 120
     }
     
-    /**
-    Call this function to load all shift data to display in table
-    */
-    
+    ///Call this function to load all data for ShiftRecord to display in TableView
     func loadAllShifts(){
         DeputyApiClient.requestForGetPreviusShifts(completionHandler: {displayShifts, error in
             if !displayShifts!.isEmpty {

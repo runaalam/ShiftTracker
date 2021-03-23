@@ -12,16 +12,17 @@ import MagicTimer
 
 class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
     
+    //MARK:- IBOutlet
     @IBOutlet weak var shiftStarButton: UIButton!
     @IBOutlet weak var shiftEndButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var timer: MagicTimerView!
     
+    /// initialization for WidgetLocationManager
     let widgetLocation = WidgetLocationManager()
     
-    let defaults = UserDefaults.standard
-    
-    enum ShiftStstus: String {
+    ///enum for shift status
+    enum ShiftStatus: String {
         case start, end
     }
     
@@ -36,34 +37,40 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
     // MARK: - IBAction
     
     @IBAction func shiftStartButtonPressed(_ sender: Any) {
-        actionForShiftStatus(status: ShiftStstus.start)
+        actionForShift(status: ShiftStatus.start)
     }
     
     @IBAction func shiftEndButtonPressed(_ sender: Any) {
-        actionForShiftStatus(status: ShiftStstus.end)
+        actionForShift(status: ShiftStatus.end)
     }
     
     //MARK:- Initial setup methods
+    
+    ///MagicTimer setup
     func setTimmer(){
         timer.isActiveInBackground = false
         timer.font = UIFont.systemFont(ofSize: 45, weight: .bold)
         timer.mode = .stopWatch
         timer.delegate = self
     }
-  
+    
+    ///MapView setup
     func setMap(){
         mapView.delegate = self
         mapView.showsUserLocation = true
     }
     
-    //Sender button will be disable and other button will be enable
+    ///Sender button will be disable and other button will be enable
+    /// - Parameter senderButton: UIButton
+    /// - Parameter otherButton: UIButton
     func toggleShiftButton(senderButton: UIButton, otherButton: UIButton){
         senderButton.isEnabled = false
         otherButton.isEnabled = true
     }
     
-    //Start and end Button action
-    func actionForShiftStatus(status: ShiftStstus) {
+    ///This method updates the view for shift action that includes the toggle button, timer handling. It also calls service method to save in the database
+    /// - Parameter status: ShiftStatus
+    func actionForShift(status: ShiftStatus) {
         var url : URL?
         switch status {
         case .start:
@@ -84,7 +91,8 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
     
     //MARK:- Service to connect network api
     
-    //Save shift record
+    ///Save shift record
+    /// - Parameter url: URL
     func saveShiftRecord(url: URL) {
         let clStatus = widgetLocation.manager!.authorizationStatus
         
@@ -99,8 +107,8 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
             })
         })
     }
-    
-    //Prepare data to save
+     
+    ///This method prepare data to save on database, depending on location authorizationStatus. If status is not restricted it calls 'init' method that stores the location attributes and return the model as completionHandler.
     func createShiftDataToSave(authorizationStatus: CLAuthorizationStatus, completionHandler: @escaping (_ shift : Shift?) -> Void){
         let shiftTime = DateUtility.getCurrentDateTimeString()
         
@@ -129,21 +137,21 @@ extension ShiftTrackViewController: CLLocationManagerDelegate, MKMapViewDelegate
         
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
             
-            let reuseId = "pin"
-            
-            var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
-            
-            if pinView == nil {
-                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                pinView!.canShowCallout = true
-                pinView!.pinTintColor = .red
-                pinView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-            }
-            else {
-                pinView!.annotation = annotation
-            }
-            
-            return pinView
+        let reuseId = "pin"
+        
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
+        
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView!.canShowCallout = true
+            pinView!.pinTintColor = .red
+            pinView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        else {
+            pinView!.annotation = annotation
+        }
+        
+        return pinView
     }
 }
 
