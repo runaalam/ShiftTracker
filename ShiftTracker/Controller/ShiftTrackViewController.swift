@@ -60,7 +60,7 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
         mapView.showsUserLocation = true
     }
     
-    ///Sender button will be disable and other button will be enable
+    ///Sender button will be disabled and other button will be enabled
     /// - Parameter senderButton: UIButton
     /// - Parameter otherButton: UIButton
     func toggleShiftButton(senderButton: UIButton, otherButton: UIButton){
@@ -108,7 +108,7 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
         })
     }
      
-    ///This method prepare data to save on database, depending on location authorizationStatus. If status is not restricted it calls 'init' method that stores the location attributes and return the model as completionHandler.
+    ///This method prepares data to save on database, depending on location authorizationStatus. If status is not restricted it calls 'init' method that stores the location attributes and return the model as completionHandler.
     func createShiftDataToSave(authorizationStatus: CLAuthorizationStatus, completionHandler: @escaping (_ shift : Shift?) -> Void){
         let shiftTime = DateUtility.getCurrentDateTimeString()
         
@@ -124,7 +124,7 @@ class ShiftTrackViewController: UIViewController, MagicTimerViewDelegate {
         }
     }
    
-    //Update preview list after added new shift
+    //Update preview list after adding new shift
     func updateOtherVc(){
         let secondTab = self.tabBarController?.viewControllers![1] as! PreviousShiftsViewController
         secondTab.needUpdate = true

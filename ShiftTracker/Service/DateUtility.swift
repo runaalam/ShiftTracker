@@ -34,7 +34,7 @@ struct DateUtility {
     
     ///This method call getDateFromISO8601() to return date string only
     static func getDate(dateStr: String)-> String {
-        return DateUtility.getDateFromISO8601(string: dateStr, formate: Constants.Formate_Shift_Date)
+        return DateUtility.getDateFromISO8601(string: dateStr, formate: Constants.FORMAT_SHIFT_DATE)
     }
     
     ///This method call getDateFromISO8601() to return display string that has start and end time status
@@ -42,13 +42,13 @@ struct DateUtility {
         var duration = ""
         
         if start != "" {
-            duration = duration + "Worked:  " + DateUtility.getDateFromISO8601(string: start, formate: Constants.Formate_Shift_Time) + " - "
+            duration = duration + "Worked:  " + DateUtility.getDateFromISO8601(string: start, formate: Constants.FORMAT_SHIFT_TIME) + " - "
         }
         
         if end == "" {
             duration = duration + "In progress"
         } else {
-            duration = duration + DateUtility.getDateFromISO8601(string: end, formate: Constants.Formate_Shift_Time)
+            duration = duration + DateUtility.getDateFromISO8601(string: end, formate: Constants.FORMAT_SHIFT_TIME)
         }
         return duration
     }

@@ -18,11 +18,11 @@ class DeputyApiClient {
         var stringValue: String {
             switch self {
             case .shiftStart:
-                return Constants.Url_Base + Constants.Url_Shift_Start
+                return Constants.URL_BASE + Constants.URL_SHIFT_START
             case .shiftEnd:
-                return Constants.Url_Base + Constants.Url_Shift_End
+                return Constants.URL_BASE + Constants.URL_SHIFT_END
             case .previousShifts:
-                return Constants.Url_Base + Constants.Url_Previus_Shifts
+                return Constants.URL_BASE + Constants.URL_PREVIOUS_SHIFTS
             }
         }
 
@@ -44,7 +44,7 @@ class DeputyApiClient {
         taskForRequest(url: shiftUrl, httpMethod: HTTPMethod.post.rawValue, responseType: String.self, body: bodyText){ response, error in
             
             if let response = response {
-                if response == Constants.Message_Shift_Started || response == Constants.Message_Shift_Ended {
+                if response == Constants.MESSAGE_SHIFT_STARTED || response == Constants.MESSAGE_SHIFT_ENDED {
                     completionHandler(true, nil)
                 }
             } else {
@@ -70,14 +70,14 @@ class DeputyApiClient {
         })
     }
     
-    /// Generic HTTP Request Methods that works for Get and Post request
+    /// Generic HTTP Request Method that works for Get and Post request
     class func taskForRequest<ResponseType: Decodable>(url: URL, httpMethod: String, responseType: ResponseType.Type, body: String, completion: @escaping (ResponseType?, Error?) -> Void) {
 
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod
         request.httpBody = body.data(using: .utf8)
-        request.addValue(Constants.Header_Content_Type, forHTTPHeaderField: "Content-Type")
-        request.addValue(Constants.Header_Authorization, forHTTPHeaderField: "Authorization")
+        request.addValue(Constants.HEADER_CONTENT_TYPE, forHTTPHeaderField: "Content-Type")
+        request.addValue(Constants.HEADER_AUTHORISATION, forHTTPHeaderField: "Authorization")
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data else {
@@ -90,21 +90,19 @@ class DeputyApiClient {
             do {
                 let responseObject = try JSONDecoder().decode(responseType.self, from: data)
                 DispatchQueue.main.async {
-                    print("========== 1 ============")
-                    print(responseObject)
                     completion(responseObject, nil)
                 }
             } catch {
                 do {
                     let errorResponse = try JSONDecoder().decode(ErrorResponse.self, from: data) as Error
                     DispatchQueue.main.async {
-                        print("=========== 2 ===========")
+                        print("=========== Decoding error ===========")
                         print(errorResponse)
                         completion(nil, errorResponse)
                     }
                 } catch {
                     DispatchQueue.main.async {
-                        print("=========== 3 ===========")
+                        print("=========== Error ===========")
                         print(error)
                         completion(nil, error)
                     }

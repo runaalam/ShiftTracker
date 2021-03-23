@@ -34,7 +34,6 @@ class DateUtilityUnitTest: XCTestCase {
     //Test case - alway pass current date string so It can not be nil
     func testGetCurrentDateTimeString() {
         let instance = DateUtility.getCurrentDateTimeString()
-        print(instance)
         XCTAssertNotNil(instance)
     }
     
@@ -42,8 +41,6 @@ class DateUtilityUnitTest: XCTestCase {
     //Test case what ever input is if unable to parse date will handle nil value and pass empty string
     func testGetDateFromISO8601() {
         let dateStr = DateUtility.getDateFromISO8601(string: "2021-03-19 22:36:42 +0000", formate: "")
-        print("=========")
-        print(dateStr)
         XCTAssertEqual("", dateStr)
     }
     

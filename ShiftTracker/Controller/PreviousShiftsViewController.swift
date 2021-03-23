@@ -17,7 +17,7 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     //ActivityIndicator initialization
     var activityIndicator = UIActivityIndicatorView(style: .large)
     
-    //Flag for list update if other controller add new data
+    //Flag for list update if other controller adds new data
     var needUpdate = false
     
     //MARK: - UIViewController override methods
@@ -32,7 +32,7 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //if other controller set this value true need to update list to load new data
+        //if other controller set this value true, then need to update list to load new data
         if needUpdate {
             activateActivityIndicator(value: true)
             loadAllShifts()

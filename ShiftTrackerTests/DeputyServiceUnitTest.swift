@@ -34,7 +34,7 @@ class DeputyServiceUnitTest: XCTestCase {
     //Test case - passing empty body in post request
     func testTaskForRequest() {
         let url = DeputyApiClient.Endpoints.shiftEnd.url
-        let promise = expectation(description: Constants.Message_Request_Fail)
+        let promise = expectation(description: Constants.MESSAGE_REQUEST_FAIL)
         let method = "POST"
         
         DeputyApiClient.taskForRequest(url: url, httpMethod: method, responseType: String.self, body: "", completion: {requestResponse , error in
