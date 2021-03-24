@@ -25,7 +25,6 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         //Method call during loading
-        print("====viewDidLoad==")
         tableViewSetUp()
         setActivityIndicator(view: self.view)
         activateActivityIndicator(value: true)
