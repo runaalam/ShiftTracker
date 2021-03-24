@@ -22,13 +22,23 @@ class ShiftTrackerUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    //Test for running the whole app
     func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        app.buttons["Shift Start"].tap()
+        sleep(20)
+        app.buttons["Shift End"].tap()
+        let tabBarsQuery = XCUIApplication().tabBars
+        tabBarsQuery.buttons["Previous Shifts"].tap()
+        sleep(10)
+        let tablesQuery = app.tables.cells
+        tablesQuery.element(boundBy: 0).swipeUp()
+        sleep(2)
+        tabBarsQuery.buttons["Shift Track"].tap()
+        sleep(5)
     }
 
     func testLaunchPerformance() throws {
