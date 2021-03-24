@@ -25,6 +25,7 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         //Method call during loading
+        print("====viewDidLoad==")
         tableViewSetUp()
         setActivityIndicator(view: self.view)
         activateActivityIndicator(value: true)
@@ -50,14 +51,14 @@ class PreviousShiftsViewController: UIViewController, UITableViewDelegate, UITab
     
     ///Call this function to load all data for ShiftRecord to display in TableView
     func loadAllShifts(){
-        DeputyApiClient.requestForGetPreviusShifts(completionHandler: {shifts, error in
+        DeputyApiClient.requestForGetPreviusShifts(completionHandler: { [self]shifts, error in
             if !shifts!.isEmpty {
                 self.displayShifts = shifts!
                 DispatchQueue.main.async { [self] in
                     self.tableView.reloadData()
-                    activateActivityIndicator(value: false)
                 }
             }
+            activateActivityIndicator(value: false)
         })
     }
     
